@@ -1,0 +1,4 @@
+contrast,estimate,SE,df,lower.CL,upper.CL,t.ratio,p.value,DV
+8.33 Hz vs 0 Hz,-199.3885,374.6082,24,-1163.4957,764.7187,-0.5323,1,first_fixation_cms_time_ms
+12.5 Hz vs 0 Hz,-538.536,319.6306,24,-1361.1503,284.0783,-1.6849,0.3149,first_fixation_cms_time_ms
+25 Hz vs 0 Hz,-180.8956,299.5381,24,-951.7992,590.0081,-0.6039,1,first_fixation_cms_time_ms

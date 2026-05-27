@@ -1,0 +1,8 @@
+DV,Effect,F,num_df,den_df_GG,MSE,pes,pes_CI_low,pes_CI_high,p_GG
+dwell_ratio_cms,frequency,0.397,1.84,44.21,32.8957,0.0163,0,0.1247,0.6581
+dwell_time_cms_ms,frequency,0.623,1.96,47.06,1372481.9571,0.0253,0,0.1419,0.5374
+fixation_duration_cms_mean_ms,frequency,1.076,1.42,34.1,29926.6065,0.0429,0,0.2199,0.3316
+fixation_duration_road_mean_ms,frequency,0.124,2.22,53.3,7814.9792,0.0052,0,0.0521,0.9019
+transition_count,frequency,0.158,2.09,50.12,1.9291,0.0066,0,0.0689,0.86240000000000006
+fixation_count_cms,frequency,0.412,2.43,58.34,5.9229,0.0169,0,0.0958,0.7036
+fixation_count_road,frequency,1.892,2.22,53.19,10.4187,0.0731,0,0.2153,0.1566

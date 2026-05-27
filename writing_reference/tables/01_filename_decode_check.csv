@@ -1,0 +1,61 @@
+participant_id,seqname,scene,depth_code_raw,frequency_hz,modulation_depth_pct
+P01,Split_A_112_L1_F1_12_5__.bgr,A,F1,12.5,40
+P01,Split_C_112_L1_F3_8_33__.bgr,C,F3,8.33,80
+P01,Split_C_112_L1_F1_12_5__.bgr,C,F1,12.5,40
+P01,Split_C_112_L1_F2_25__.bgr,C,F2,25,60
+P01,Split_A_112_L1_F2_8_33__.bgr,A,F2,8.33,60
+P01,Split_C_112_L1_F3_25__.bgr,C,F3,25,80
+P01,Split_C_112_L1_F2_8_33__.bgr,C,F2,8.33,60
+P01,Split_B_112_L1_F2_12_5__.bgr,B,F2,12.5,60
+P01,Split_B_112_L1_F1_8_33__.bgr,B,F1,8.33,40
+P01,Split_A_112_L1_F3_25__.bgr,A,F3,25,80
+P01,Split_C_112_L1_F3_12_5__.bgr,C,F3,12.5,80
+P01,Split_B_112_L1_F3_12_5__.bgr,B,F3,12.5,80
+P01,Split_B_112_L1_F1_25__.bgr,B,F1,25,40
+P01,Split_C_112_L1_F2_12_5__.bgr,C,F2,12.5,60
+P01,Split_B_112_L1_F2_25__.bgr,B,F2,25,60
+P01,Split_C_112_L1_F1_8_33__.bgr,C,F1,8.33,40
+P01,Split_C_112_L1_F1_25__.bgr,C,F1,25,40
+P01,Split_A_112_L1_F1_25__.bgr,A,F1,25,40
+P01,Split_B_112_L1_F3_8_33__.bgr,B,F3,8.33,80
+P01,Split_B_112_L1_F2_8_33__.bgr,B,F2,8.33,60
+P01,Split_A_112_L1_F2_12_5__.bgr,A,F2,12.5,60
+P01,Split_C_112_L1_F0_00__.bgr,C,F0,0,NA (stable/0Hz)
+P01,Split_B_112_L1_F0_00__.bgr,B,F0,0,NA (stable/0Hz)
+P01,Split_B_112_L1_F3_25__.bgr,B,F3,25,80
+P01,Split_B_112_L1_F1_12_5__.bgr,B,F1,12.5,40
+P01,Split_A_112_L1_F2_25__.bgr,A,F2,25,60
+P01,Split_A_112_L1_F3_12_5__.bgr,A,F3,12.5,80
+P01,Split_A_112_L1_F1_8_33__.bgr,A,F1,8.33,40
+P01,Split_A_112_L1_F0_00__.bgr,A,F0,0,NA (stable/0Hz)
+P01,Split_A_112_L1_F3_8_33__.bgr,A,F3,8.33,80
+P02,Split_A_112_L1_F2_12_5__.bgr,A,F2,12.5,60
+P02,Split_A_112_L1_F0_00__.bgr,A,F0,0,NA (stable/0Hz)
+P02,Split_A_112_L1_F1_8_33__.bgr,A,F1,8.33,40
+P02,Split_C_112_L1_F1_25__.bgr,C,F1,25,40
+P02,Split_C_112_L1_F0_00__.bgr,C,F0,0,NA (stable/0Hz)
+P02,Split_B_112_L1_F1_25__.bgr,B,F1,25,40
+P02,Split_A_112_L1_F1_12_5__.bgr,A,F1,12.5,40
+P02,Split_C_112_L1_F3_12_5__.bgr,C,F3,12.5,80
+P02,Split_B_112_L1_F2_12_5__.bgr,B,F2,12.5,60
+P02,Split_C_112_L1_F2_8_33__.bgr,C,F2,8.33,60
+P02,Split_B_112_L1_F3_25__.bgr,B,F3,25,80
+P02,Split_B_112_L1_F2_25__.bgr,B,F2,25,60
+P02,Split_C_112_L1_F1_12_5__.bgr,C,F1,12.5,40
+P02,Split_C_112_L1_F1_8_33__.bgr,C,F1,8.33,40
+P02,Split_C_112_L1_F3_8_33__.bgr,C,F3,8.33,80
+P02,Split_B_112_L1_F3_12_5__.bgr,B,F3,12.5,80
+P02,Split_B_112_L1_F1_12_5__.bgr,B,F1,12.5,40
+P02,Split_B_112_L1_F2_8_33__.bgr,B,F2,8.33,60
+P02,Split_A_112_L1_F3_8_33__.bgr,A,F3,8.33,80
+P02,Split_C_112_L1_F2_25__.bgr,C,F2,25,60
+P02,Split_A_112_L1_F2_8_33__.bgr,A,F2,8.33,60
+P02,Split_A_112_L1_F3_25__.bgr,A,F3,25,80
+P02,Split_B_112_L1_F3_8_33__.bgr,B,F3,8.33,80
+P02,Split_A_112_L1_F3_12_5__.bgr,A,F3,12.5,80
+P02,Split_B_112_L1_F0_00__.bgr,B,F0,0,NA (stable/0Hz)
+P02,Split_B_112_L1_F1_8_33__.bgr,B,F1,8.33,40
+P02,Split_A_112_L1_F2_25__.bgr,A,F2,25,60
+P02,Split_C_112_L1_F3_25__.bgr,C,F3,25,80
+P02,Split_C_112_L1_F2_12_5__.bgr,C,F2,12.5,60
+P02,Split_A_112_L1_F1_25__.bgr,A,F1,25,40

@@ -1,0 +1,26 @@
+participant_id,Q1_difficulty,Q2_mental_demand,Q3_effort,Q4_motion_clarity,Q5_flicker_interference,Q6_visual_discomfort,Q7_confidence,Q8_flicker_noticeability,Q9_flicker_influence,Q1_difficulty_code,Q2_mental_demand_code,Q3_effort_code,Q4_motion_clarity_code,Q5_flicker_interference_code,Q6_visual_discomfort_code,Q7_confidence_code,Q8_flicker_noticeability_code,Q9_flicker_influence_code
+P01,Easy,Low,Little,Somewhat clear,Strongly,Slightly,Confident,Extremely noticeable,Hardly at all,1,1,1,5,3,2,5,4,1
+P02,Somewhat difficult,Somewhat high,Somewhat much,Neutral,Very strongly,Noticeable,Somewhat confident,Very noticeable,Significantly,4,4,4,4,4,4,4,3,5
+P03,Difficult,Somewhat high,Moderate,Somewhat clear,Strongly,Noticeable,Confident,Very noticeable,Slightly,5,4,3,5,3,4,5,3,2
+P04,Somewhat easy,Moderate,Moderate,Clear,Strongly,Moderate,Confident,Extremely noticeable,Strongly,2,3,3,6,3,3,5,4,4
+P05,Easy,Somewhat low,Moderate,Somewhat clear,Strongly,Hardly any,Confident,Noticeable,Moderately,1,2,3,5,3,1,5,2,3
+P06,Very difficult,Very high,Very much,Unclear,Strongly,Noticeable,Unconfident,Very noticeable,Significantly,6,6,6,2,3,4,2,3,5
+P07,Somewhat easy,Moderate,Moderate,Neutral,Slightly,Slightly,Somewhat confident,Slightly noticeable,Hardly at all,2,3,3,4,1,2,4,1,1
+P08,Somewhat difficult,Moderate,Moderate,Neutral,Strongly,Noticeable,Neutral,Very noticeable,Strongly,4,3,3,4,3,4,3,3,4
+P09,Somewhat difficult,Somewhat high,Much,Somewhat unclear,Extremely,Noticeable,Neutral,Extremely noticeable,Strongly,4,4,5,3,5,4,3,4,4
+P10,Neutral,Somewhat low,Little,Clear,Slightly,Hardly any,Confident,Slightly noticeable,Hardly at all,3,2,1,6,1,1,5,1,1
+P11,Somewhat difficult,Somewhat high,Moderate,Somewhat clear,Very strongly,Moderate,Somewhat confident,Very noticeable,Strongly,4,4,3,5,4,3,4,3,4
+P12,Somewhat easy,Moderate,Moderate,Somewhat clear,Moderately,Hardly any,Confident,Very noticeable,Moderately,2,3,3,5,2,1,5,3,3
+P13,Somewhat difficult,Moderate,Much,Somewhat clear,Strongly,Severe,Confident,Extremely noticeable,Significantly,4,3,5,5,3,5,5,4,5
+p14,Difficult,High,Somewhat much,Somewhat clear,Moderately,Slightly,Unconfident,Extremely noticeable,Significantly,5,5,4,5,2,2,2,4,5
+P15,Difficult,Somewhat high,Somewhat much,Neutral,Strongly,Moderate,Somewhat confident,Very noticeable,Significantly,5,4,4,4,3,3,4,3,5
+P16,Somewhat difficult,Somewhat high,Moderate,Neutral,Strongly,Noticeable,Somewhat confident,Very noticeable,Moderately,4,4,3,4,3,4,4,3,3
+P17,Somewhat difficult,Somewhat high,Somewhat much,Somewhat clear,Very strongly,Moderate,Somewhat confident,Noticeable,Significantly,4,4,4,5,4,3,4,2,5
+P18,Difficult,Low,Little,Unclear,Slightly,Moderate,Unconfident,Noticeable,Slightly,5,1,1,2,1,3,2,2,2
+P19,Difficult,High,Very much,Very unclear,Strongly,Moderate,Not confident at all,Noticeable,Slightly,5,5,6,1,3,3,1,2,2
+P20,Somewhat difficult,Low,Moderate,Somewhat clear,Moderately,Slightly,Confident,Very noticeable,Moderately,4,1,3,5,2,2,5,3,3
+P21,Difficult,Very high,Much,Somewhat unclear,Moderately,Noticeable,Somewhat confident,Extremely noticeable,Strongly,5,6,5,3,2,4,4,4,4
+P22,Somewhat difficult,Moderate,Somewhat little,Somewhat clear,Moderately,Hardly any,Somewhat confident,Extremely noticeable,Moderately,4,3,2,5,2,1,4,4,3
+P23,Easy,Low,Little,Somewhat clear,Strongly,Noticeable,Confident,Noticeable,Strongly,1,1,1,5,3,4,5,2,4
+P24,Somewhat difficult,Somewhat low,Somewhat little,Somewhat unclear,Slightly,Hardly any,Somewhat confident,Noticeable,Slightly,4,2,2,3,1,1,4,2,2
+P25,Somewhat difficult,Moderate,Somewhat little,Somewhat unclear,Strongly,Moderate,Confident,Very noticeable,Significantly,4,3,2,3,3,3,5,3,5

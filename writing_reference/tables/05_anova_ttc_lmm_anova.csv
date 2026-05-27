@@ -1,0 +1,4 @@
+Effect,Sum Sq,Mean Sq,NumDF,DenDF,F_value,p_value
+frequency,28.2481,14.1241,2,642,6.6272,0.0014
+modulation_depth,9.2591,4.6296,2,642,2.1722,0.1148
+frequency:modulation_depth,14.5058,3.6264,4,642,1.7016,0.1479

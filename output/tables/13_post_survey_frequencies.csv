@@ -1,0 +1,49 @@
+question,question_label,numeric_code,response_label,n,pct
+Q1_difficulty,Q1: Lane-change difficulty,1,Easy,3,12.0
+Q1_difficulty,Q1: Lane-change difficulty,2,Somewhat easy,3,12.0
+Q1_difficulty,Q1: Lane-change difficulty,3,Neutral,1,4.0
+Q1_difficulty,Q1: Lane-change difficulty,4,Somewhat difficult,11,44.0
+Q1_difficulty,Q1: Lane-change difficulty,5,Difficult,6,24.0
+Q1_difficulty,Q1: Lane-change difficulty,6,Very difficult,1,4.0
+Q2_mental_demand,Q2: Mental demand,1,Low,4,16.0
+Q2_mental_demand,Q2: Mental demand,2,Somewhat low,3,12.0
+Q2_mental_demand,Q2: Mental demand,3,Moderate,7,28.0
+Q2_mental_demand,Q2: Mental demand,4,Somewhat high,7,28.0
+Q2_mental_demand,Q2: Mental demand,5,High,2,8.0
+Q2_mental_demand,Q2: Mental demand,6,Very high,2,8.0
+Q3_effort,Q3: Effort exerted,1,Little,4,16.0
+Q3_effort,Q3: Effort exerted,2,Somewhat little,3,12.0
+Q3_effort,Q3: Effort exerted,3,Moderate,9,36.0
+Q3_effort,Q3: Effort exerted,4,Somewhat much,4,16.0
+Q3_effort,Q3: Effort exerted,5,Much,3,12.0
+Q3_effort,Q3: Effort exerted,6,Very much,2,8.0
+Q4_motion_clarity,Q4: Motion clarity (CMS display),1,Very unclear,1,4.0
+Q4_motion_clarity,Q4: Motion clarity (CMS display),2,Unclear,2,8.0
+Q4_motion_clarity,Q4: Motion clarity (CMS display),3,Somewhat unclear,4,16.0
+Q4_motion_clarity,Q4: Motion clarity (CMS display),4,Neutral,5,20.0
+Q4_motion_clarity,Q4: Motion clarity (CMS display),5,Somewhat clear,11,44.0
+Q4_motion_clarity,Q4: Motion clarity (CMS display),6,Clear,2,8.0
+Q5_flicker_interference,Q5: Flicker interference,1,Slightly,4,16.0
+Q5_flicker_interference,Q5: Flicker interference,2,Moderately,5,20.0
+Q5_flicker_interference,Q5: Flicker interference,3,Strongly,12,48.0
+Q5_flicker_interference,Q5: Flicker interference,4,Very strongly,3,12.0
+Q5_flicker_interference,Q5: Flicker interference,5,Extremely,1,4.0
+Q6_visual_discomfort,Q6: Visual discomfort / eye fatigue,1,Hardly any,5,20.0
+Q6_visual_discomfort,Q6: Visual discomfort / eye fatigue,2,Slightly,4,16.0
+Q6_visual_discomfort,Q6: Visual discomfort / eye fatigue,3,Moderate,7,28.0
+Q6_visual_discomfort,Q6: Visual discomfort / eye fatigue,4,Noticeable,8,32.0
+Q6_visual_discomfort,Q6: Visual discomfort / eye fatigue,5,Severe,1,4.0
+Q7_confidence,Q7: Decision confidence,1,Not confident at all,1,4.0
+Q7_confidence,Q7: Decision confidence,2,Unconfident,3,12.0
+Q7_confidence,Q7: Decision confidence,3,Neutral,2,8.0
+Q7_confidence,Q7: Decision confidence,4,Somewhat confident,9,36.0
+Q7_confidence,Q7: Decision confidence,5,Confident,10,40.0
+Q8_flicker_noticeability,Q8: Flicker-difference noticeability,1,Slightly noticeable,2,8.0
+Q8_flicker_noticeability,Q8: Flicker-difference noticeability,2,Noticeable,6,24.0
+Q8_flicker_noticeability,Q8: Flicker-difference noticeability,3,Very noticeable,10,40.0
+Q8_flicker_noticeability,Q8: Flicker-difference noticeability,4,Extremely noticeable,7,28.0
+Q9_flicker_influence,Q9: Flicker influence on decisions,1,Hardly at all,3,12.0
+Q9_flicker_influence,Q9: Flicker influence on decisions,2,Slightly,4,16.0
+Q9_flicker_influence,Q9: Flicker influence on decisions,3,Moderately,5,20.0
+Q9_flicker_influence,Q9: Flicker influence on decisions,4,Strongly,6,24.0
+Q9_flicker_influence,Q9: Flicker influence on decisions,5,Significantly,7,28.0

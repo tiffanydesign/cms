@@ -1,0 +1,8 @@
+flag,n_flagged,pct_of_750,participants,example_vidx
+flag_skipped_trial,2,0.3,"P03, P11",15
+flag_no_response,2,0.3,"P03, P11",15
+flag_missing_rating,2,0.3,"P03, P11",15
+flag_low_eye_quality,24,3.2,"P02, P03, P04, P07, P11, P21, P23, P24","1, 2, 3, 4, 6"
+flag_extreme_ttc,6,0.8,"P04, P07, P09, P10, P18","0, 8, 13, 16, 18"
+is_P09_nolicense,30,4,P09,"0, 1, 2, 3, 4"
+is_P15_colorblind,30,4,P15,"0, 1, 2, 3, 4"

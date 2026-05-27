@@ -1,0 +1,4 @@
+Effect,F,num_df,den_df_GG,MSE,pes,pes_CI_low,pes_CI_high,p_GG
+frequency,8.278,1.61,38.7,0.7055,0.2565,0.046,0.4569,0.002
+modulation_depth,1.856,1.83,44.01,0.9072,0.0718,0,0.2346,0.1712
+frequency:modulation_depth,1.682,2.86,68.7,1.004,0.0655,0,0.1783,0.181

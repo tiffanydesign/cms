@@ -1,0 +1,11 @@
+variable,condition,frequency,modulation_depth,n,mean,sd,median,IQR,missing_n
+first_fixation_cms_time_ms,0 Hz (stable),0,NA,75,3461.409,2740.854,2283.4,4962.55,0
+first_fixation_cms_time_ms,8.33 Hz / 40%,8.33,40,75,3378.067,3079.322,2058.4,3970.85,0
+first_fixation_cms_time_ms,8.33 Hz / 60%,8.33,60,74,3325.069,3007.774,2200.05,3437.6,0
+first_fixation_cms_time_ms,8.33 Hz / 80%,8.33,80,75,3080.288,2441.535,2050,3695.85,0
+first_fixation_cms_time_ms,12.5 Hz / 40%,12.5,40,75,3139.276,2510.096,2075,3987.5,0
+first_fixation_cms_time_ms,12.5 Hz / 60%,12.5,60,75,2806.285,2289.66,1600,2891.75,0
+first_fixation_cms_time_ms,12.5 Hz / 80%,12.5,80,75,2823.059,2666.694,1733.4,2200,0
+first_fixation_cms_time_ms,25 Hz / 40%,25,40,75,3298.621,2873.57,2000,4258.45,0
+first_fixation_cms_time_ms,25 Hz / 60%,25,60,75,3117.848,2477.499,1958.4,3508.35,0
+first_fixation_cms_time_ms,25 Hz / 80%,25,80,75,3425.072,2889.74,2041.7,4416.7,0

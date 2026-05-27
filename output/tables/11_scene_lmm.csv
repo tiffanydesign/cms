@@ -1,0 +1,8 @@
+Model,DV,Effect,Sum Sq,Mean Sq,NumDF,DenDF,F_value,p_value
+M3_LMM_full,TTC_s,frequency,33.0426,16.5213,2,622.0032,12.1388,0
+M3_LMM_full,TTC_s,modulation_depth,9.411,4.7055,2,622.0032,3.4573,0.0321
+M3_LMM_full,TTC_s,scene,9.779,4.8895,2,622.0032,3.5925,0.0281
+M3_LMM_full,TTC_s,frequency:modulation_depth,4.0353,1.0088,4,622.0031,0.7412,0.5641
+M3_LMM_full,TTC_s,frequency:scene,13.6786,3.4196,4,622.0031,2.5125,0.0407
+M3_LMM_full,TTC_s,modulation_depth:scene,6.609,1.6523,4,622.0031,1.214,0.3036
+M3_LMM_full,TTC_s,frequency:modulation_depth:scene,3.99,0.4988,8,622.0031,0.3665,0.9381

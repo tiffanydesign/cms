@@ -1,0 +1,10 @@
+effect,term,estimate,std.error,statistic,df,p.value,conf.low,conf.high
+fixed,(Intercept),4.2568,0.4491,9.4792,31.3414,0,3.3413,5.1722
+fixed,frequency12.5,-0.2047,0.2384,-0.8585,642,0.3909,-0.6728,0.2635
+fixed,frequency25,0.3517,0.2384,1.4753,642,0.1406,-0.1164,0.8198
+fixed,modulation_depth60,0.4871,0.2384,2.0433,642,0.0414,0.019,0.9553
+fixed,modulation_depth80,0.0655,0.2384,0.2749,642,0.7835,-0.4026,0.5337
+fixed,frequency12.5:modulation_depth60,-0.4258,0.3371,-1.2631,642,0.207,-1.0879,0.2362
+fixed,frequency25:modulation_depth60,-0.4153,0.3371,-1.2319,642,0.2184,-1.0774,0.2467
+fixed,frequency12.5:modulation_depth80,0.4063,0.3371,1.205,642,0.2286,-0.2558,1.0683
+fixed,frequency25:modulation_depth80,0.224,0.3371,0.6645,642,0.5066,-0.438,0.8861

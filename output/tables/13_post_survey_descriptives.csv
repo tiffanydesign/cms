@@ -1,0 +1,10 @@
+question,label,n,mean,SD,median,median_label,IQR,Q1,Q3,mode,mode_label,min,max,n_levels,direction
+Q1_difficulty,Q1: Lane-change difficulty,25,3.68,1.406,4.0,Somewhat difficult,2.0,3.0,5.0,4,Somewhat difficult,1,6,6,higher = more difficult
+Q2_mental_demand,Q2: Mental demand,25,3.24,1.451,3.0,Moderate,2.0,2.0,4.0,3,Moderate,1,6,6,higher = more demand
+Q3_effort,Q3: Effort exerted,25,3.2,1.472,3.0,Moderate,2.0,2.0,4.0,3,Moderate,1,6,6,higher = more effort
+Q4_motion_clarity,Q4: Motion clarity (CMS display),25,4.16,1.281,5.0,Somewhat clear,2.0,3.0,5.0,5,Somewhat clear,1,6,6,higher = clearer
+Q5_flicker_interference,Q5: Flicker interference,25,2.68,1.03,3.0,Strongly,1.0,2.0,3.0,3,Strongly,1,5,5,higher = more interference
+Q6_visual_discomfort,Q6: Visual discomfort / eye fatigue,25,2.84,1.214,3.0,Moderate,2.0,2.0,4.0,4,Noticeable,1,5,5,higher = more discomfort
+Q7_confidence,Q7: Decision confidence,25,3.96,1.172,4.0,Somewhat confident,1.0,4.0,5.0,5,Confident,1,5,5,higher = more confident
+Q8_flicker_noticeability,Q8: Flicker-difference noticeability,25,2.88,0.927,3.0,Very noticeable,2.0,2.0,4.0,3,Very noticeable,1,4,4,higher = more noticeable
+Q9_flicker_influence,Q9: Flicker influence on decisions,25,3.4,1.384,4.0,Strongly,3.0,2.0,5.0,5,Significantly,1,5,5,higher = more influence

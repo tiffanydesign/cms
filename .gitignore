@@ -1,0 +1,28 @@
+# Word temp files
+~$*
+
+# Claude session logs
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# System
+.DS_Store
+Thumbs.db
+
+# R
+.Rhistory
+.Rdata
+.Ruserdata
+
+# Misc
+.here
+
+# Large raw eye-tracking data (exceeds GitHub 100 MB limit; keep locally only)
+1. Experiment_Result/Raw_Data/**/*.tsv
+1. Experiment_Result/Raw_Data/P01(Pilot Test)/
+1. Experiment_Result/Raw_Data/P*/

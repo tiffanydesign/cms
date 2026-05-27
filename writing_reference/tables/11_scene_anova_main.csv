@@ -1,0 +1,7 @@
+Model,DV,Effect,F,num_df,den_df_GG,MSE,pes,pes_CI_low,pes_CI_high,p_GG
+M1_freq_x_scene,TTC_s,frequency,5.113,1.83,43.92,1.2367,0.1756,0.0103,0.3628,0.0119
+M1_freq_x_scene,TTC_s,scene,6.444,1.97,47.28,0.8458,0.2117,0.0303,0.3925,0.0035
+M1_freq_x_scene,TTC_s,frequency:scene,2.34,4.38,105.18,0.8527,0.0889,0,0.178,0.0543
+M2_depth_x_scene,TTC_s,modulation_depth,2.741,1.74,41.78,0.6667,0.1025,0,0.2833,0.083
+M2_depth_x_scene,TTC_s,scene,2.739,1.91,45.84,0.6519,0.1024,0,0.2725,0.0776
+M2_depth_x_scene,TTC_s,modulation_depth:scene,1.377,2.99,71.73,0.5404,0.0543,0,0.1561,0.2567

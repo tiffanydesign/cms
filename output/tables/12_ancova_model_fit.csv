@@ -1,0 +1,5 @@
+Model,AIC,BIC,logLik,ΔAIC_base
+Base (frequency only),258.36,274,-123.182,0
++ exp_confidence,260.23,278.47,-123.116,1.87
++ driving_style,260.08,278.31,-123.039,1.72
++ both covariates,261.89,282.73,-122.945,3.53

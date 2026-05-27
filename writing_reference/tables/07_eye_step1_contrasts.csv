@@ -1,0 +1,22 @@
+contrast,estimate,SE,df,lower.CL,upper.CL,t.ratio,p.value,DV
+8.33 Hz vs 0 Hz,-1.0125,1.4685,24,-4.792,2.767,-0.6895,1,dwell_ratio_cms
+12.5 Hz vs 0 Hz,-1.3064,1.6279,24,-5.4961,2.8833,-0.8025,1,dwell_ratio_cms
+25 Hz vs 0 Hz,-0.9439,1.6365,24,-5.1556,3.2678,-0.5768,1,dwell_ratio_cms
+8.33 Hz vs 0 Hz,-294.9827,302.7347,24,-1074.113,484.1477,-0.9744,1,dwell_time_cms_ms
+12.5 Hz vs 0 Hz,-334.5529,340.2206,24,-1210.1587,541.0529,-0.9833,1,dwell_time_cms_ms
+25 Hz vs 0 Hz,-229.0387,338.4653,24,-1100.1269,642.0496,-0.6767,1,dwell_time_cms_ms
+8.33 Hz vs 0 Hz,-50.6798,43.8947,24,-163.649,62.2893,-1.1546,0.6662,fixation_duration_cms_mean_ms
+12.5 Hz vs 0 Hz,-52.6912,42.0323,24,-160.8673,55.4849,-1.2536,0.6662,fixation_duration_cms_mean_ms
+25 Hz vs 0 Hz,-42.3874,46.8856,24,-163.0541,78.2792,-0.9041,0.6662,fixation_duration_cms_mean_ms
+8.33 Hz vs 0 Hz,-4.6463,23.0394,24,-63.9414,54.6488,-0.2017,1,fixation_duration_road_mean_ms
+12.5 Hz vs 0 Hz,-12.9491,23.4775,24,-73.3718,47.4736,-0.5516,1,fixation_duration_road_mean_ms
+25 Hz vs 0 Hz,-5.2841,28.0008,24,-77.3482,66.7799,-0.1887,1,fixation_duration_road_mean_ms
+8.33 Hz vs 0 Hz,-0.1867,0.3429,24,-1.0692,0.6959,-0.5443,1,transition_count
+12.5 Hz vs 0 Hz,0.0133,0.4365,24,-1.1101,1.1368,0.0305,1,transition_count
+25 Hz vs 0 Hz,-0.0844,0.3689,24,-1.0339,0.865,-0.2289,1,transition_count
+8.33 Hz vs 0 Hz,-0.52,0.7075,24,-2.3409,1.3009,-0.735,1,fixation_count_cms
+12.5 Hz vs 0 Hz,-0.6222,0.6967,24,-2.4152,1.1708,-0.8931,1,fixation_count_cms
+25 Hz vs 0 Hz,-0.52,0.7263,24,-2.3893,1.3493,-0.7159,1,fixation_count_cms
+8.33 Hz vs 0 Hz,0.6578,0.8796,24,-1.6059,2.9214,0.7479,0.4618,fixation_count_road
+12.5 Hz vs 0 Hz,1.6489,0.9773,24,-0.8664,4.1642,1.6871,0.3136,fixation_count_road
+25 Hz vs 0 Hz,1.4711,0.911,24,-0.8734,3.8157,1.6149,0.3136,fixation_count_road

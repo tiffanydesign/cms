@@ -1,0 +1,4 @@
+DV,stage,Effect,F,num_df,den_df_GG,MSE,pes,pes_CI_low,pes_CI_high,p_GG
+first_fixation_cms_time_ms,stage2_latency_s2,frequency,3.161,1.97,47.23,1003976.3945,0.1164,0,0.287,0.0522
+first_fixation_cms_time_ms,stage2_latency_s2,modulation_depth,0.607,1.99,47.82,1207068.459,0.0247,0,0.1385,0.5486
+first_fixation_cms_time_ms,stage2_latency_s2,frequency:modulation_depth,0.551,2.78,66.68,1879620.179,0.0224,0,0.0986,0.6362

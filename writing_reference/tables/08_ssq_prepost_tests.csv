@@ -1,0 +1,4 @@
+subscale,mean_pre,mean_post,mean_delta,sd_delta,t,df_t,p_ttest,W,p_wilcox,cohens_d
+Nausea (N),2.67,5.34,2.67,6.47,2.064,24,0.05,45,0.0593,0.413
+Oculo-motor (O),6.97,17.89,10.92,18.05,3.023,24,0.0059,95,0.0081,0.605
+Total Severity (TS),5.39,13.76,8.38,13.37,3.134,24,0.0045,154,0.003,0.627

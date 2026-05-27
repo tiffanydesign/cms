@@ -1,0 +1,1415 @@
+﻿Rscript.exe : here() starts at C:/Users/50560/
+Desktop/cms_analysis
+At line:1 char:1
++ & "C:\Program Files\R\R-4.6.0\bin\Rscript.ex
+e" "C:\Users\50560\Deskto ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ( 
+   here() starts a...op/cms_analysis:String)  
+   [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandEr 
+   ror
+ 
+
+=================================================================
+>>  R/00_setup.R
+=================================================================
+── Attaching core tidyverse packages ─────────
+─────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.2.1     ✔ readr     2.2.0
+✔ forcats   1.0.1     ✔ stringr   1.6.0
+✔ ggplot2   4.0.3     ✔ tibble    3.3.1
+✔ lubridate 1.9.5     ✔ tidyr     1.3.2
+✔ purrr     1.2.2     
+── Conflicts ─────────────────────────────────
+───────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflict
+ed.r-lib.org/>) to force all conflicts to beco
+me errors
+Loading required package: lme4
+Loading required package: Matrix
+
+Attaching package: 'Matrix'
+
+The following objects are masked from 'package
+:tidyr':
+
+    expand, pack, unpack
+
+Registered S3 method overwritten by 'car':
+  method           from
+  na.action.merMod lme4
+************
+Welcome to afex. For support visit: http://afe
+x.singmann.science/
+- Functions for ANOVAs: aov_car(), aov_ez(), a
+nd aov_4()
+- Methods for calculating p-values with mixed(
+): 'S', 'KR', 'LRT', and 'PB'
+- 'afex_aov' and 'mixed' objects can be passed
+ to emmeans() for follow-up tests
+- Get and set global package options with: afe
+x_options()
+- Set sum-to-zero contrasts globally: set_sum_
+contrasts()
+- For example analyses see: browseVignettes("a
+fex")
+************
+
+Attaching package: 'afex'
+
+The following object is masked from 'package:l
+me4':
+
+    lmer
+
+Welcome to emmeans.
+Caution: You lose important information if you
+ filter this package's results.
+See '? untidy'
+
+Attaching package: 'rstatix'
+
+The following object is masked from 'package:s
+tats':
+
+    filter
+
+Loading required package: carData
+
+Attaching package: 'car'
+
+The following object is masked from 'package:d
+plyr':
+
+    recode
+
+The following object is masked from 'package:p
+urrr':
+
+    some
+
+
+Attaching package: 'lmerTest'
+
+The following object is masked from 'package:l
+me4':
+
+    lmer
+
+The following object is masked from 'package:s
+tats':
+
+    step
+
+
+Attaching package: 'ordinal'
+
+The following object is masked from 'package:d
+plyr':
+
+    slice
+
+
+Attaching package: 'janitor'
+
+The following object is masked from 'package:r
+statix':
+
+    make_clean_names
+
+The following objects are masked from 'package
+:stats':
+
+    chisq.test, fisher.test
+
+00_setup.R loaded — seed=2026, theme=theme_min
+imal(12), helpers ready.
+
+=================================================================
+>>  R/01_ingest.R
+=================================================================
+00_setup.R loaded — seed=2026, theme=theme_min
+imal(12), helpers ready.
+
+[RATING] 25 files found:
+   P01_17_04_2026.dat 
+   P02_24_04_2026.dat 
+   P03_24_04_2026.dat 
+   P04_30_04_2026.dat 
+   P05_30_04_2026.dat 
+   P06_09H26_04_05_2026.dat 
+   P07_11H17_04_05_2026.dat 
+   P08_13H15_05_05_2026.dat 
+   P09_15H09_05_05_2026.dat 
+   P10_09H22_06_05_2026.dat 
+   P11_11H23_06_05_2026.dat 
+   P12_12H18_07_05_2026.dat 
+   P13_11H30_11_05_2026.dat 
+   P14_15H24_11_05_2026.dat 
+   P15_13H20_12_05_2026.dat 
+   P16_15H45_13_05_2026.dat 
+   P17_11H22_15_05_2026.dat 
+   P18_14H38_15_05_2026.dat 
+   P19_15H17_18_05_2026.dat 
+   P20_11H22_19_05_2026.dat 
+   P21_11H38_21_05_2026.dat 
+   P22_09H17_22_05_2026.dat 
+   P23_11H12_22_05_2026.dat 
+   P24_15H30_22_05_2026.dat 
+   P25_16H32_22_05_2026.dat 
+
+[RATING] Total rows: 750 (expected 750)
+[RATING] paddle_time_s range: [-1.000, 19.175]
+[RATING] Unit looks like SECONDS (values in plausible 0–19 s range). TTC = 19 - paddle_time_s.
+[RATING] Q1–Q4 assertion done.
+
+[EYE] 25 files found:
+   eyetracking_results_P01.xlsx 
+   eyetracking_results_P02.xlsx 
+   eyetracking_results_P03.xlsx 
+   eyetracking_results_P04.xlsx 
+   eyetracking_results_P05.xlsx 
+   eyetracking_results_P06.xlsx 
+   eyetracking_results_P07.xlsx 
+   eyetracking_results_P08.xlsx 
+   eyetracking_results_P09.xlsx 
+   eyetracking_results_P10.xlsx 
+   eyetracking_results_P11.xlsx 
+   eyetracking_results_P12.xlsx 
+   eyetracking_results_P13.xlsx 
+   eyetracking_results_P14.xlsx 
+   eyetracking_results_P15.xlsx 
+   eyetracking_results_P16.xlsx 
+   eyetracking_results_P17.xlsx 
+   eyetracking_results_P18.xlsx 
+   eyetracking_results_P19.xlsx 
+   eyetracking_results_P20.xlsx 
+   eyetracking_results_P21.xlsx 
+   eyetracking_results_P22.xlsx 
+   eyetracking_results_P23.xlsx 
+   eyetracking_results_P24.xlsx 
+   eyetracking_results_P25.xlsx 
+
+[EYE] Total rows: 750 (expected ~750)
+[EYE] Columns (24): participant, eye_video_index, video_name, playback_start, playback_end, clock_offset_s, total_duration_ms, valid_samples, valid_ratio, dwell_time_cms_ms, dwell_ratio_cms, dwell_time_road_ms, dwell_ratio_road, fixation_count_total, fixation_count_cms, fixation_count_road, fixation_duration_mean_ms, fixation_duration_cms_mean_ms, fixation_duration_road_mean_ms, transition_count, first_fixation_cms_time_ms, eyes_not_found_ratio, participant_id, source_file_eye
+[EYE] NOTE: pupil_diameter_* columns absent from this export.
+
+[JOIN] Match rates:
+  Primary  (participant_id, video_name):   750/750  (100.0%)
+  Fallback (participant_id, video_index):  750/750  (100.0%)
+
+[MASTER] Rows: 750 (expected 750)
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/master_long.csv
+
+01_ingest.R DONE → output/master_long.csv
+
+=================================================================
+>>  R/02_flag.R
+=================================================================
+00_setup.R loaded — seed=2026, theme=theme_min
+imal(12), helpers ready.
+[FLAG] master_long loaded: 750 rows, 36 cols
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/master_long.csv
+
+[FLAG] flag_missing_rating breakdown by video_index:
+# A tibble: 0 × 2
+# ℹ 2 variables: video_index <dbl>, n_missing <int>
+  → 0 / 0 missing-rating rows are at video_index=15 (0%)
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/02_flag_summary.csv
+
+[FLAG] Summary:
+# A tibble: 6 × 4
+  flag                 n_flagged pct_of_750 participants                        
+  <chr>                    <int>      <dbl> <chr>                               
+1 flag_no_response             0        0   ""                                  
+2 flag_missing_rating          0        0   ""                                  
+3 flag_low_eye_quality        24        3.2 "P02, P03, P04, P07, P11, P21, P23,…
+4 flag_extreme_ttc             8        1.1 "P03, P04, P07, P09, P10, P11, P18" 
+5 is_P09_nolicense            30        4   "P09"                               
+6 is_P15_colorblind           30        4   "P15"                               
+
+02_flag.R DONE → output/tables/02_flag_summary.csv
+
+=================================================================
+>>  R/03_describe.R
+=================================================================
+00_setup.R loaded — seed=2026, theme=theme_min
+imal(12), helpers ready.
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/03_descriptives_ttc.csv
+[DESC] TTC done.
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/03_descriptives_ratings.cs
+v
+[DESC] Ratings done.
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/03_descriptives_eye.csv
+[DESC] Eye metrics done.
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/03_descriptives_firstfix_s
+tage1_prop.csv
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/03_descriptives_firstfix_s
+tage2_latency.csv
+[DESC] first_fixation two-stage done.
+
+=== TTC (s) by condition [up to 75 trials per condition] ===
+Condition                  n   mean     sd median    IQR
+------------------------------------------------------- 
+0 Hz (stable)             75  4.515  2.159  4.329  3.034
+8.33 Hz / 40%             75  4.257  2.359  4.002  3.564
+8.33 Hz / 60%             75  4.744  3.382  4.164  2.815
+8.33 Hz / 80%             75  4.322  2.328  4.081  2.818
+12.5 Hz / 40%             75  4.052  2.308  3.524  3.328
+12.5 Hz / 60%             75  4.113  2.356  3.844  2.773
+12.5 Hz / 80%             75  4.524  2.547  4.165  2.806
+25 Hz / 40%               75  4.608  2.248  4.318  2.904
+25 Hz / 60%               75  4.680  2.456  4.245  2.565
+25 Hz / 80%               75  4.898  2.497  4.642  2.966
+
+=== Mean Q1–Q4 by condition ===
+# A tibble: 10 × 5
+   condition        Q1    Q2    Q3    Q4
+   <fct>         <dbl> <dbl> <dbl> <dbl>
+ 1 0 Hz (stable)  2.46  3.03  3.01  5.21
+ 2 8.33 Hz / 40%  3.62  3.55  3.45  4.83
+ 3 8.33 Hz / 60%  4.40  3.98  4.02  4.72
+ 4 8.33 Hz / 80%  5.16  4.47  4.26  4.50
+ 5 12.5 Hz / 40%  3.86  3.75  3.65  4.89
+ 6 12.5 Hz / 60%  4.72  4.25  4.24  4.68
+ 7 12.5 Hz / 80%  5.61  4.87  4.89  4.45
+ 8 25 Hz / 40%    4.01  3.85  3.60  5.00
+ 9 25 Hz / 60%    4.70  4.22  4.25  4.49
+10 25 Hz / 80%    5.60  4.75  4.63  4.38
+
+=== dwell_ratio_cms (mean/sd) & transition_count (mean/sd) by condition ===
+# A tibble: 10 × 5
+   condition     dwell_ratio_cms_mean transition_count_mean dwell_ratio_cms_sd
+   <fct>                        <dbl>                 <dbl>              <dbl>
+ 1 0 Hz (stable)                 38.7                  11.2               13.5
+ 2 8.33 Hz / 40%                 37.7                  11.5               16.2
+ 3 8.33 Hz / 60%                 36.9                  10.8               17.1
+ 4 8.33 Hz / 80%                 38.5                  10.9               16.5
+ 5 12.5 Hz / 40%                 37.4                  11.3               17.0
+ 6 12.5 Hz / 60%                 35.4                  11.4               16.6
+ 7 12.5 Hz / 80%                 39.4                  11.0               17.6
+ 8 25 Hz / 40%                   37.0                  11.4               15.7
+ 9 25 Hz / 60%                   37.6                  11.0               17.8
+10 25 Hz / 80%                   38.7                  11.0               18.9
+# ℹ 1 more variable: transition_count_sd <dbl>
+
+=== first_fixation CMS: % fixated ===
+# A tibble: 10 × 4
+   condition     n_trials n_cms_fixated pct_cms_fixated
+   <fct>            <int>         <int>           <dbl>
+ 1 0 Hz (stable)       75            75           100  
+ 2 8.33 Hz / 40%       75            75           100  
+ 3 8.33 Hz / 60%       75            74            98.7
+ 4 8.33 Hz / 80%       75            75           100  
+ 5 12.5 Hz / 40%       75            75           100  
+ 6 12.5 Hz / 60%       75            75           100  
+ 7 12.5 Hz / 80%       75            75           100  
+ 8 25 Hz / 40%         75            75           100  
+ 9 25 Hz / 60%         75            75           100  
+10 25 Hz / 80%         75            75           100  
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/03_participant_characteris
+tics.csv
+
+=== Participant characteristics (N=25) ===
+Age:           mean=36.4  sd=10.9  range=[22, 59]
+Gender:        Female=15  Male=10
+License years: mean=11.5  sd=11.9  (P09 excluded)
+Flicker discomfort history: 7 / 25 (not 'Never')
+Special cases: P09 (no license), P15 (colorblind)
+
+# A tibble: 25 × 5
+   participant_id   age gender license_years note                               
+   <chr>          <dbl> <chr>          <dbl> <chr>                              
+ 1 P01               22 Male           4     ""                                 
+ 2 P02               59 Female        41     ""                                 
+ 3 P03               52 Female        34     ""                                 
+ 4 P04               44 Male          12     ""                                 
+ 5 P05               33 Female         5     ""                                 
+ 6 P06               29 Female         5     ""                                 
+ 7 P07               31 Male          11     ""                                 
+ 8 P08               42 Male          10     ""                                 
+ 9 P09               36 Male          NA     "No driving license"               
+10 P10               32 Male          10     ""                                 
+11 P11               40 Female         4     ""                                 
+12 P12               31 Female         0.333 ""                                 
+13 P13               29 Female         6     ""                                 
+14 P14               34 Female         3     ""                                 
+15 P15               37 Male          19     "Color blind (experimenter record)"
+16 P16               25 Female         5     ""                                 
+17 P17               31 Female         1     ""                                 
+18 P18               42 Female        12     ""                                 
+19 P19               23 Female         5     ""                                 
+20 P20               49 Male           2     ""                                 
+21 P21               23 Female         6     ""                                 
+22 P22               23 Female         4     ""                                 
+23 P23               52 Male          30     ""                                 
+24 P24               33 Female         9     ""                                 
+25 P25               57 Male          38     ""                                 
+
+03_describe.R DONE → 6 CSVs in output/tables/
+
+=================================================================
+>>  R/04_assumptions.R
+=================================================================
+00_setup.R loaded — seed=2026, theme=theme_min
+imal(12), helpers ready.
+[ASSUMP] master loaded: 750 rows
+[ASSUMP] step1: 100 rows (expect 100 = 25x4)
+[ASSUMP] step2: 225 rows (expect 225 = 25x9)
+
+ ============================================================ 
+
+-- TTC_s --
+  Shapiro-Wilk: step1 0/4 fail | step2 0/9 fail
+  Mauchly step1 (freq 4-lvl): W=0.528 p=0.0130 GGe=0.745 -> VIOLATED->GG
+  Extreme outliers: step1=0  step2=0
+
+-- Q1 --
+  Shapiro-Wilk: step1 0/4 fail | step2 0/9 fail
+  Mauchly step1 (freq 4-lvl): W=0.188 p=0.0000 GGe=0.512 -> VIOLATED->GG
+  Extreme outliers: step1=0  step2=1
+
+-- Q2 --
+  Shapiro-Wilk: step1 0/4 fail | step2 0/9 fail
+  Mauchly step1 (freq 4-lvl): W=0.282 p=0.0000 GGe=0.549 -> VIOLATED->GG
+  Extreme outliers: step1=0  step2=0
+
+-- Q3 --
+  Shapiro-Wilk: step1 0/4 fail | step2 0/9 fail
+  Mauchly step1 (freq 4-lvl): W=0.340 p=0.0002 GGe=0.611 -> VIOLATED->GG
+  Extreme outliers: step1=0  step2=0
+
+-- Q4 --
+  Shapiro-Wilk: step1 0/4 fail | step2 0/9 fail
+  Mauchly step1 (freq 4-lvl): W=0.184 p=0.0000 GGe=0.504 -> VIOLATED->GG
+  Extreme outliers: step1=0  step2=0
+
+-- dwell_ratio_cms --
+  Shapiro-Wilk: step1 0/4 fail | step2 0/9 fail
+  Mauchly step1 (freq 4-lvl): W=0.393 p=0.0007 GGe=0.614 -> VIOLATED->GG
+  Extreme outliers: step1=0  step2=1
+
+-- transition_count --
+  Shapiro-Wilk: step1 0/4 fail | step2 0/9 fail
+  Mauchly step1 (freq 4-lvl): W=0.490 p=0.0060 GGe=0.696 -> VIOLATED->GG
+  Extreme outliers: step1=0  step2=0
+
+-- fixation_count_cms --
+  Shapiro-Wilk: step1 0/4 fail | step2 0/9 fail
+  Mauchly step1 (freq 4-lvl): W=0.694 p=0.1410 GGe=0.810 -> pass
+  Extreme outliers: step1=0  step2=1
+
+-- fixation_duration_cms_mean_ms --
+  Shapiro-Wilk: step1 0/4 fail | step2 0/9 fail
+  Mauchly step1 (freq 4-lvl): W=0.119 p=0.0000 GGe=0.474 -> VIOLATED->GG
+  Extreme outliers: step1=1  step2=1
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/04_assumption_checks.csv
+
+=== Assumption Check Summary ===
+# A tibble: 9 × 9
+  DV            s1_normality s1_sphericity s1_n_extreme s2_normality s2_freq_sph
+  <chr>         <chr>        <chr>                <int> <chr>        <chr>      
+1 TTC_s         pass         VIOLATED->GG             0 pass         VIOLATED->…
+2 Q1            pass         VIOLATED->GG             0 pass         pass       
+3 Q2            pass         VIOLATED->GG             0 pass         pass       
+4 Q3            pass         VIOLATED->GG             0 pass         VIOLATED->…
+5 Q4            pass         VIOLATED->GG             0 pass         pass       
+6 dwell_ratio_… pass         VIOLATED->GG             0 pass         pass       
+7 transition_c… pass         VIOLATED->GG             0 pass         pass       
+8 fixation_cou… pass         pass                     0 pass         pass       
+9 fixation_dur… pass         VIOLATED->GG             1 pass         VIOLATED->…
+# ℹ 3 more variables: s2_dep_sph <chr>, s2_int_sph <chr>, s2_n_extreme <int>
+  [FIG] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/figures/fig_qq_ttc.png
+  [FIG] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/figures/fig_qq_ratings.png
+  [FIG] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/figures/fig_qq_eye.png
+[ASSUMP] QQ plots saved.
+  [FIG] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/figures/fig_outlier_ttc.png
+[ASSUMP] Outlier boxplot saved.
+  [FIG] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/figures/fig_resid_ttc.png
+[ASSUMP] Residual plot saved.
+
+04_assumptions.R - ANOVA Pre-Diagnostic Summary
+Generated: 2026-05-26 09:19
+
+Step 1 aggregate: 100 rows (25 participants x 4 frequency levels)
+Step 2 aggregate: 225 rows (25 participants x 9 flickering conditions)
+
+=== TTC_s ===
+  Normality Step1 (SW/condition): pass -- 0/4 cells p<.05
+  Normality Step2 (SW/condition): pass -- 0/9 cells p<.05
+  Sphericity Step1 freq (4 lvl):  W=0.528 p=0.0130 GGe=0.745 -> VIOLATED->GG
+  Sphericity Step2 frequency:     W=0.760 p=0.0420 GGe=0.806 -> VIOLATED->GG
+  Sphericity Step2 depth:         W=0.909 p=0.3350 GGe=0.917 -> pass
+  Sphericity Step2 freq x depth:  W=0.415 p=0.0200 GGe=0.716 -> VIOLATED->GG
+  Extreme outliers: step1=0  step2=0
+
+=== Q1 ===
+  Normality Step1 (SW/condition): pass -- 0/4 cells p<.05
+  Normality Step2 (SW/condition): pass -- 0/9 cells p<.05
+  Sphericity Step1 freq (4 lvl):  W=0.188 p=0.0000 GGe=0.512 -> VIOLATED->GG
+  Sphericity Step2 frequency:     W=0.795 p=0.0720 GGe=0.830 -> pass
+  Sphericity Step2 depth:         W=0.511 p=0.0004 GGe=0.672 -> VIOLATED->GG
+  Sphericity Step2 freq x depth:  W=0.551 p=0.1480 GGe=0.828 -> pass
+  Extreme outliers: step1=0  step2=1
+
+=== Q2 ===
+  Normality Step1 (SW/condition): pass -- 0/4 cells p<.05
+  Normality Step2 (SW/condition): pass -- 0/9 cells p<.05
+  Sphericity Step1 freq (4 lvl):  W=0.282 p=0.0000 GGe=0.549 -> VIOLATED->GG
+  Sphericity Step2 frequency:     W=0.922 p=0.3940 GGe=0.928 -> pass
+  Sphericity Step2 depth:         W=0.524 p=0.0006 GGe=0.677 -> VIOLATED->GG
+  Sphericity Step2 freq x depth:  W=0.490 p=0.0680 GGe=0.745 -> pass
+  Extreme outliers: step1=0  step2=0
+
+=== Q3 ===
+  Normality Step1 (SW/condition): pass -- 0/4 cells p<.05
+  Normality Step2 (SW/condition): pass -- 0/9 cells p<.05
+  Sphericity Step1 freq (4 lvl):  W=0.340 p=0.0002 GGe=0.611 -> VIOLATED->GG
+  Sphericity Step2 frequency:     W=0.733 p=0.0280 GGe=0.790 -> VIOLATED->GG
+  Sphericity Step2 depth:         W=0.813 p=0.0930 GGe=0.843 -> pass
+  Sphericity Step2 freq x depth:  W=0.617 p=0.2900 GGe=0.840 -> pass
+  Extreme outliers: step1=0  step2=0
+
+=== Q4 ===
+  Normality Step1 (SW/condition): pass -- 0/4 cells p<.05
+  Normality Step2 (SW/condition): pass -- 0/9 cells p<.05
+  Sphericity Step1 freq (4 lvl):  W=0.184 p=0.0000 GGe=0.504 -> VIOLATED->GG
+  Sphericity Step2 frequency:     W=0.959 p=0.6220 GGe=0.961 -> pass
+  Sphericity Step2 depth:         W=0.791 p=0.0680 GGe=0.827 -> pass
+  Sphericity Step2 freq x depth:  W=0.822 p=0.8840 GGe=0.924 -> pass
+  Extreme outliers: step1=0  step2=0
+
+=== dwell_ratio_cms ===
+  Normality Step1 (SW/condition): pass -- 0/4 cells p<.05
+  Normality Step2 (SW/condition): pass -- 0/9 cells p<.05
+  Sphericity Step1 freq (4 lvl):  W=0.393 p=0.0007 GGe=0.614 -> VIOLATED->GG
+  Sphericity Step2 frequency:     W=0.960 p=0.6250 GGe=0.961 -> pass
+  Sphericity Step2 depth:         W=0.907 p=0.3260 GGe=0.915 -> pass
+  Sphericity Step2 freq x depth:  W=0.412 p=0.0190 GGe=0.701 -> VIOLATED->GG
+  Extreme outliers: step1=0  step2=1
+
+=== transition_count ===
+  Normality Step1 (SW/condition): pass -- 0/4 cells p<.05
+  Normality Step2 (SW/condition): pass -- 0/9 cells p<.05
+  Sphericity Step1 freq (4 lvl):  W=0.490 p=0.0060 GGe=0.696 -> VIOLATED->GG
+  Sphericity Step2 frequency:     W=0.937 p=0.4750 GGe=0.941 -> pass
+  Sphericity Step2 depth:         W=0.928 p=0.4210 GGe=0.932 -> pass
+  Sphericity Step2 freq x depth:  W=0.565 p=0.1730 GGe=0.774 -> pass
+  Extreme outliers: step1=0  step2=0
+
+=== fixation_count_cms ===
+  Normality Step1 (SW/condition): pass -- 0/4 cells p<.05
+  Normality Step2 (SW/condition): pass -- 0/9 cells p<.05
+  Sphericity Step1 freq (4 lvl):  W=0.694 p=0.1410 GGe=0.810 -> pass
+  Sphericity Step2 frequency:     W=0.918 p=0.3740 GGe=0.924 -> pass
+  Sphericity Step2 depth:         W=0.840 p=0.1340 GGe=0.862 -> pass
+  Sphericity Step2 freq x depth:  W=0.771 p=0.7570 GGe=0.889 -> pass
+  Extreme outliers: step1=0  step2=1
+
+=== fixation_duration_cms_mean_ms ===
+  Normality Step1 (SW/condition): pass -- 0/4 cells p<.05
+  Normality Step2 (SW/condition): pass -- 0/9 cells p<.05
+  Sphericity Step1 freq (4 lvl):  W=0.119 p=0.0000 GGe=0.474 -> VIOLATED->GG
+  Sphericity Step2 frequency:     W=0.702 p=0.0170 GGe=0.770 -> VIOLATED->GG
+  Sphericity Step2 depth:         W=0.752 p=0.0380 GGe=0.801 -> VIOLATED->GG
+  Sphericity Step2 freq x depth:  W=0.490 p=0.0680 GGe=0.767 -> pass
+  Extreme outliers: step1=1  step2=1
+
+RECOMMENDATIONS:
+  * VIOLATED->GG: apply Greenhouse-Geisser correction in scripts 05-07.
+  * Normality violations: RM-ANOVA robust to moderate deviations (CLT, n=25);
+    LMM robustness checks included in 05-07.
+  * Extreme outliers: retained in main analysis (no deletion);
+    sensitivity analysis with P09/P15 exclusion in 09_sensitivity.R. 
+
+04_assumptions.R DONE
+  -> output/tables/04_assumption_checks.csv
+  -> output/tables/04_assumption_summary.txt
+  -> output/figures/fig_qq_ttc.png, fig_qq_ratings.png, fig_qq_eye.png
+  -> output/figures/fig_outlier_ttc.png, fig_resid_ttc.png
+
+=================================================================
+>>  R/05_anova_ttc.R
+=================================================================
+00_setup.R loaded — seed=2026, theme=theme_min
+imal(12), helpers ready.
+
+Attaching package: 'effectsize'
+
+The following objects are masked from 'package
+:rstatix':
+
+    cohens_d, eta_squared
+
+[TTC] master: 750 rows
+[TTC] step1: 100 rows | step2: 225 rows | LMM trials: 675
+
+ ============================================================ 
+STEP 1 (SRQ1): frequency 4-level RM-ANOVA [GG correction]
+============================================================ 
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/05_anova_ttc_step1_main.cs
+v
+
+[Table] Step 1 ANOVA (GG-corrected):
+Anova Table (Type 3 tests)
+
+Response: TTC_s
+     Effect          df  MSE      F  pes p.value
+1 frequency 2.23, 53.62 0.40 3.60 * .130    .030
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '+' 0.1 ' ' 1
+
+Sphericity correction method: GG 
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/05_anova_ttc_step1_emm.csv
+
+[EMM] Condition means:
+# A tibble: 4 × 5
+  frequency emmean    SE lower.CL upper.CL
+  <fct>      <dbl> <dbl>    <dbl>    <dbl>
+1 X0          4.51 0.394     3.70     5.33
+2 X8.33       4.44 0.411     3.59     5.29
+3 X12.5       4.23 0.432     3.34     5.12
+4 X25         4.73 0.434     3.83     5.62
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/05_anova_ttc_step1_contras
+ts.csv
+
+[Contrasts] Planned comparisons vs 0 Hz (Holm-corrected):
+# A tibble: 3 × 8
+  contrast        estimate    SE    df t.ratio p.value lower.CL upper.CL
+  <chr>              <dbl> <dbl> <dbl>   <dbl>   <dbl>    <dbl>    <dbl>
+1 8.33 Hz vs 0 Hz  -0.0737 0.174    24  -0.424   0.675   -0.520    0.373
+2 12.5 Hz vs 0 Hz  -0.285  0.188    24  -1.52    0.426   -0.768    0.198
+3 25 Hz vs 0 Hz     0.214  0.175    24   1.23    0.465   -0.236    0.664
+
+ ============================================================ 
+STEP 2 (SRQ3): 3x3 two-way RM-ANOVA [GG correction]
+============================================================ 
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/05_anova_ttc_step2_main.cs
+v
+
+[Table] Step 2 ANOVA (GG-corrected):
+Anova Table (Type 3 tests)
+
+Response: TTC_s
+                      Effect          df  MSE       F  pes p.value
+1                  frequency 1.61, 38.70 0.71 8.28 ** .256    .002
+2           modulation_depth 1.83, 44.01 0.91    1.86 .072    .171
+3 frequency:modulation_depth 2.86, 68.70 1.00    1.68 .066    .181
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '+' 0.1 ' ' 1
+
+Sphericity correction method: GG 
+
+[—] Interaction NOT significant (p=0.1810) — main-effect pairs only.
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/05_anova_ttc_step2_posthoc
+.csv
+
+[Post-hoc] frequency (Holm):
+# A tibble: 3 × 6
+  contrast      estimate     SE    df t.ratio p.value
+  <chr>            <dbl>  <dbl> <dbl>   <dbl>   <dbl>
+1 X8.33 - X12.5    0.211 0.148     24    1.43  0.167 
+2 X8.33 - X25     -0.288 0.120     24   -2.39  0.0497
+3 X12.5 - X25     -0.499 0.0954    24   -5.23  0.0001
+
+[Post-hoc] modulation_depth (Holm):
+# A tibble: 3 × 6
+  contrast  estimate    SE    df t.ratio p.value
+  <chr>        <dbl> <dbl> <dbl>   <dbl>   <dbl>
+1 X40 - X60  -0.207  0.131    24  -1.57    0.257
+2 X40 - X80  -0.276  0.144    24  -1.91    0.203
+3 X60 - X80  -0.0689 0.169    24  -0.408   0.687
+
+ ============================================================ 
+LMM ROBUSTNESS: TTC ~ freq*depth + (1|participant) + (1|scene)
+============================================================ 
+boundary (singular) fit: see help('isSingular'
+)
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/05_anova_ttc_lmm_anova.csv
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/05_anova_ttc_lmm_fixed.csv
+
+[LMM] ANOVA-type III (Satterthwaite df):
+# A tibble: 3 × 7
+  Effect                     `Sum Sq` `Mean Sq` NumDF DenDF F_value p_value
+  <chr>                         <dbl>     <dbl> <dbl> <dbl>   <dbl>   <dbl>
+1 frequency                     28.2      14.1      2   642    6.63  0.0014
+2 modulation_depth               9.26      4.63     2   642    2.17  0.115 
+3 frequency:modulation_depth    14.5       3.63     4   642    1.70  0.148 
+
+[LMM] Fixed effects with 95% CI:
+# A tibble: 9 × 7
+  term                   estimate std.error statistic conf.low conf.high p.value
+  <chr>                     <dbl>     <dbl>     <dbl>    <dbl>     <dbl>   <dbl>
+1 (Intercept)              4.26       0.449     9.48     3.34      5.17   0     
+2 frequency12.5           -0.205      0.238    -0.858   -0.673     0.264  0.391 
+3 frequency25              0.352      0.238     1.48    -0.116     0.820  0.141 
+4 modulation_depth60       0.487      0.238     2.04     0.019     0.955  0.0414
+5 modulation_depth80       0.0655     0.238     0.275   -0.403     0.534  0.784 
+6 frequency12.5:modulat…  -0.426      0.337    -1.26    -1.09      0.236  0.207 
+7 frequency25:modulatio…  -0.415      0.337    -1.23    -1.08      0.247  0.218 
+8 frequency12.5:modulat…   0.406      0.337     1.20    -0.256     1.07   0.229 
+9 frequency25:modulatio…   0.224      0.337     0.664   -0.438     0.886  0.507 
+
+ ============================================================ 
+SUMMARY: TTC RM-ANOVA Results
+============================================================ 
+
+Step 1 (SRQ1) — frequency (4-level), GG-corrected:
+  frequency: F(2.23, 53.62) = 3.600,  p = 0.0297,  ηp² = 0.1304  [0.0000, 0.2928]
+
+  Planned contrasts vs 0 Hz (Holm):
+    8.33 Hz vs 0 Hz       Δ=-0.074  t(24.0)=-0.424  p=0.6752  ns
+    12.5 Hz vs 0 Hz       Δ=-0.285  t(24.0)=-1.518  p=0.4261  ns
+    25 Hz vs 0 Hz         Δ=0.214  t(24.0)=1.225  p=0.4647  ns
+
+Step 2 (SRQ3) — 3×3 frequency × depth, GG-corrected:
+  frequency                      F(1.61, 38.7) = 8.278  p = 0.0020  ηp² = 0.2565 [0.0460, 0.4569]  **
+  modulation_depth               F(1.83, 44.01) = 1.856  p = 0.1712  ηp² = 0.0718 [0.0000, 0.2346]  ns
+  frequency:modulation_depth     F(2.86, 68.7) = 1.682  p = 0.1810  ηp² = 0.0655 [0.0000, 0.1783]  ns
+
+05_anova_ttc.R DONE
+  -> 05_anova_ttc_step1_main.csv, _step1_contrasts.csv, _step1_emm.csv
+  -> 05_anova_ttc_step2_main.csv, _step2_posthoc.csv
+  -> 05_anova_ttc_lmm_anova.csv, _lmm_fixed.csv
+
+=================================================================
+>>  R/06_anova_ratings.R
+=================================================================
+00_setup.R loaded — seed=2026, theme=theme_min
+imal(12), helpers ready.
+[RATINGS] master: 750 rows | flag_missing_rating: 0
+
+===== Q2–Q3 Consistency (NASA-TLX: mental demand × effort) =====
+  Spearman ρ = 0.907   Pearson r = 0.901   Cronbach α = 0.948
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/06_ratings_q2q3_consistenc
+y.csv
+  → α=0.948 ≥ .70: cognitive_load = mean(Q2,Q3) constructed.
+
+-------------------------------------------------------
+Q1
+-------------------------------------------------------
+  Step1: F(1.54,36.89)=54.070 p=0.0000 ηp²=0.693
+# A tibble: 3 × 4
+  contrast        estimate t.ratio p.value
+  <chr>              <dbl>   <dbl>   <dbl>
+1 8.33 Hz vs 0 Hz     1.93    7.30       0
+2 12.5 Hz vs 0 Hz     2.27    8.18       0
+3 25 Hz vs 0 Hz       2.31    8.28       0
+  Step2 freq: p=0.0077  depth: p=0.0000  int: p=0.8203
+  CLMM Q1 ...
+design is column rank deficient so dropping 2 
+coef
+
+-------------------------------------------------------
+Q2
+-------------------------------------------------------
+  Step1: F(1.65,39.51)=28.659 p=0.0000 ηp²=0.544
+# A tibble: 3 × 4
+  contrast        estimate t.ratio p.value
+  <chr>              <dbl>   <dbl>   <dbl>
+1 8.33 Hz vs 0 Hz    0.972    5.36       0
+2 12.5 Hz vs 0 Hz    1.26     5.85       0
+3 25 Hz vs 0 Hz      1.25     6.27       0
+  Step2 freq: p=0.0092  depth: p=0.0000  int: p=0.7416
+  CLMM Q2 ...
+design is column rank deficient so dropping 1 
+coef
+
+-------------------------------------------------------
+Q3
+-------------------------------------------------------
+  Step1: F(1.83,44.01)=24.195 p=0.0000 ηp²=0.502
+# A tibble: 3 × 4
+  contrast        estimate t.ratio p.value
+  <chr>              <dbl>   <dbl>   <dbl>
+1 8.33 Hz vs 0 Hz    0.896    5.11       0
+2 12.5 Hz vs 0 Hz    1.25     6.15       0
+3 25 Hz vs 0 Hz      1.15     5.32       0
+  Step2 freq: p=0.0217  depth: p=0.0000  int: p=0.1811
+  CLMM Q3 ...
+
+-------------------------------------------------------
+Q4
+-------------------------------------------------------
+  Step1: F(1.51,36.28)=5.722 p=0.0119 ηp²=0.192
+# A tibble: 3 × 4
+  contrast        estimate t.ratio p.value
+  <chr>              <dbl>   <dbl>   <dbl>
+1 8.33 Hz vs 0 Hz   -0.525   -3.56  0.0048
+2 12.5 Hz vs 0 Hz   -0.538   -2.42  0.0321
+3 25 Hz vs 0 Hz     -0.593   -2.59  0.0321
+  Step2 freq: p=0.8102  depth: p=0.0003  int: p=0.4146
+  CLMM Q4 ...
+
+-------------------------------------------------------
+cognitive_load
+-------------------------------------------------------
+  Step1: F(1.74,41.67)=27.869 p=0.0000 ηp²=0.537
+# A tibble: 3 × 4
+  contrast        estimate t.ratio p.value
+  <chr>              <dbl>   <dbl>   <dbl>
+1 8.33 Hz vs 0 Hz    0.934    5.32       0
+2 12.5 Hz vs 0 Hz    1.25     6.15       0
+3 25 Hz vs 0 Hz      1.20     5.92       0
+  Step2 freq: p=0.0102  depth: p=0.0000  int: p=0.4457
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/06_ratings_step1_main.csv
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/06_ratings_step1_contrasts
+.csv
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/06_ratings_step1_emm.csv
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/06_ratings_step2_main.csv
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/06_ratings_step2_posthoc.c
+sv
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/06_ratings_clmm.csv
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/06_ratings_summary.csv
+
+ ====================================================================== 
+SUMMARY: Ratings RM-ANOVA (GG-corrected)
+====================================================================== 
+
+Q1                 Step1 freq: F(1.54, 36.89)=54.07 p=0.0000 ηp²=0.693 ***
+                   Step2 freq p=0.0077 ηp²=0.201 ** | depth p=0.0000 ηp²=0.767 *** | int p=0.8203 ns
+Q2                 Step1 freq: F(1.65, 39.51)=28.66 p=0.0000 ηp²=0.544 ***
+                   Step2 freq p=0.0092 ηp²=0.184 ** | depth p=0.0000 ηp²=0.639 *** | int p=0.7416 ns
+Q3                 Step1 freq: F(1.83, 44.01)=24.20 p=0.0000 ηp²=0.502 ***
+                   Step2 freq p=0.0217 ηp²=0.163 * | depth p=0.0000 ηp²=0.652 *** | int p=0.1811 ns
+Q4                 Step1 freq: F(1.51, 36.28)=5.72 p=0.0119 ηp²=0.192 *
+                   Step2 freq p=0.8102 ηp²=0.008 ns | depth p=0.0003 ηp²=0.319 *** | int p=0.4146 ns
+cognitive_load     Step1 freq: F(1.74, 41.67)=27.87 p=0.0000 ηp²=0.537 ***
+                   Step2 freq p=0.0102 ηp²=0.184 * | depth p=0.0000 ηp²=0.665 *** | int p=0.4457 ns
+
+06_anova_ratings.R DONE
+  -> 06_ratings_q2q3_consistency.csv
+  -> 06_ratings_step1_main/contrasts/emm.csv
+  -> 06_ratings_step2_main/posthoc.csv
+  -> 06_ratings_clmm.csv, 06_ratings_summary.csv
+
+=================================================================
+>>  R/07_anova_eye.R
+=================================================================
+00_setup.R loaded — seed=2026, theme=theme_min
+imal(12), helpers ready.
+
+Attaching package: 'MASS'
+
+The following object is masked from 'package:p
+atchwork':
+
+    area
+
+The following object is masked from 'package:r
+statix':
+
+    select
+
+The following object is masked from 'package:d
+plyr':
+
+    select
+
+[EYE] master: 750 rows | cms_fixated: 749 | flag_low_eye_quality: 24
+
+[PUPIL] Checking pupil columns...
+  CAVEAT: No pupil columns found in master_long.csv.
+  Pupil analysis requires luminance-controlled pupillometry data.
+  Screen brightness was not held constant across conditions --
+  any pupil diameter differences would be uninterpretable.
+  Skipping pupil RM-ANOVA.
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/07_eye_pupil_caveat.csv
+
+-------------------------------------------------------
+dwell_ratio_cms
+-------------------------------------------------------
+  Step1: F(1.84,44.21)=0.397 p=0.6581 ηp²=0.016
+# A tibble: 3 × 4
+  contrast        estimate t.ratio p.value
+  <chr>              <dbl>   <dbl>   <dbl>
+1 8.33 Hz vs 0 Hz   -1.01   -0.690       1
+2 12.5 Hz vs 0 Hz   -1.31   -0.802       1
+3 25 Hz vs 0 Hz     -0.944  -0.577       1
+  Step2 freq: p=0.8977  depth: p=0.0263  int: p=0.5004
+
+-------------------------------------------------------
+dwell_time_cms_ms
+-------------------------------------------------------
+  Step1: F(1.96,47.06)=0.623 p=0.5374 ηp²=0.025
+# A tibble: 3 × 4
+  contrast        estimate t.ratio p.value
+  <chr>              <dbl>   <dbl>   <dbl>
+1 8.33 Hz vs 0 Hz    -295.  -0.974       1
+2 12.5 Hz vs 0 Hz    -335.  -0.983       1
+3 25 Hz vs 0 Hz      -229.  -0.677       1
+  Step2 freq: p=0.8406  depth: p=0.0254  int: p=0.7544
+
+-------------------------------------------------------
+fixation_duration_cms_mean_ms
+-------------------------------------------------------
+  Step1: F(1.42,34.1)=1.076 p=0.3316 ηp²=0.043
+# A tibble: 3 × 4
+  contrast        estimate t.ratio p.value
+  <chr>              <dbl>   <dbl>   <dbl>
+1 8.33 Hz vs 0 Hz    -50.7  -1.15    0.666
+2 12.5 Hz vs 0 Hz    -52.7  -1.25    0.666
+3 25 Hz vs 0 Hz      -42.4  -0.904   0.666
+  Step2 freq: p=0.7671  depth: p=0.8489  int: p=0.2428
+
+-------------------------------------------------------
+fixation_duration_road_mean_ms
+-------------------------------------------------------
+  Step1: F(2.22,53.3)=0.124 p=0.9019 ηp²=0.005
+# A tibble: 3 × 4
+  contrast        estimate t.ratio p.value
+  <chr>              <dbl>   <dbl>   <dbl>
+1 8.33 Hz vs 0 Hz    -4.65  -0.202       1
+2 12.5 Hz vs 0 Hz   -12.9   -0.552       1
+3 25 Hz vs 0 Hz      -5.28  -0.189       1
+  Step2 freq: p=0.8236  depth: p=0.3272  int: p=0.5435
+
+-------------------------------------------------------
+transition_count
+-------------------------------------------------------
+  Step1: F(2.09,50.12)=0.158 p=0.8624 ηp²=0.007
+# A tibble: 3 × 4
+  contrast        estimate t.ratio p.value
+  <chr>              <dbl>   <dbl>   <dbl>
+1 8.33 Hz vs 0 Hz  -0.187  -0.544        1
+2 12.5 Hz vs 0 Hz   0.0133  0.0305       1
+3 25 Hz vs 0 Hz    -0.0844 -0.229        1
+  Step2 freq: p=0.7295  depth: p=0.3632  int: p=0.6795
+
+-------------------------------------------------------
+fixation_count_cms
+-------------------------------------------------------
+  Step1: F(2.43,58.34)=0.412 p=0.7036 ηp²=0.017
+# A tibble: 3 × 4
+  contrast        estimate t.ratio p.value
+  <chr>              <dbl>   <dbl>   <dbl>
+1 8.33 Hz vs 0 Hz   -0.52   -0.735       1
+2 12.5 Hz vs 0 Hz   -0.622  -0.893       1
+3 25 Hz vs 0 Hz     -0.52   -0.716       1
+  Step2 freq: p=0.9671  depth: p=0.1989  int: p=0.2076
+
+-------------------------------------------------------
+fixation_count_road
+-------------------------------------------------------
+  Step1: F(2.22,53.19)=1.892 p=0.1566 ηp²=0.073
+# A tibble: 3 × 4
+  contrast        estimate t.ratio p.value
+  <chr>              <dbl>   <dbl>   <dbl>
+1 8.33 Hz vs 0 Hz    0.658   0.748   0.462
+2 12.5 Hz vs 0 Hz    1.65    1.69    0.314
+3 25 Hz vs 0 Hz      1.47    1.61    0.314
+  Step2 freq: p=0.2407  depth: p=0.0455  int: p=0.6372
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/07_eye_step1_main.csv
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/07_eye_step1_contrasts.csv
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/07_eye_step1_emm.csv
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/07_eye_step2_main.csv
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/07_eye_step2_posthoc.csv
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/07_eye_summary.csv
+
+ ============================================================ 
+PART B: Count GLMM (Poisson -> NB if overdispersed)
+============================================================ 
+
+  GLMM: transition_count
+boundary (singular) fit: see help('isSingular'
+)
+    Poisson overdispersion ratio = 0.783
+    Model: Poisson | fixed terms: 9
+# A tibble: 6 × 5
+  term                             estimate std.error statistic p.value
+  <chr>                               <dbl>     <dbl>     <dbl>   <dbl>
+1 (Intercept)                        2.39      0.0731   32.7      0    
+2 frequency12.5                     -0.0141    0.0484   -0.290    0.772
+3 frequency25                       -0.0023    0.0483   -0.0483   0.962
+4 modulation_depth60                -0.0636    0.049    -1.30     0.194
+5 modulation_depth80                -0.0513    0.0489   -1.05     0.294
+6 frequency12.5:modulation_depth60   0.0707    0.0689    1.02     0.305
+
+  GLMM: fixation_count_cms
+boundary (singular) fit: see help('isSingular'
+)
+    Poisson overdispersion ratio = 1.276
+    Model: Poisson | fixed terms: 9
+# A tibble: 6 × 5
+  term                             estimate std.error statistic p.value
+  <chr>                               <dbl>     <dbl>     <dbl>   <dbl>
+1 (Intercept)                        2.80      0.0795    35.2     0    
+2 frequency12.5                     -0.0247    0.0393    -0.628   0.53 
+3 frequency25                        0.0278    0.0387     0.717   0.474
+4 modulation_depth60                -0.0547    0.0396    -1.38    0.166
+5 modulation_depth80                 0.0278    0.0387     0.717   0.474
+6 frequency12.5:modulation_depth60   0.043     0.056      0.768   0.443
+
+  GLMM: fixation_count_road
+boundary (singular) fit: see help('isSingular'
+)
+    Poisson overdispersion ratio = 1.899
+    -> Fitting NB GLMM (lme4::glmer + MASS::negative.binomial)
+boundary (singular) fit: see help('isSingular'
+)
+    Model: NB | fixed terms: 9
+# A tibble: 6 × 5
+  term                             estimate std.error statistic p.value
+  <chr>                               <dbl>     <dbl>     <dbl>   <dbl>
+1 (Intercept)                        3.34      0.0689    48.4     0    
+2 frequency12.5                      0.0297    0.0406     0.732   0.464
+3 frequency25                        0.0087    0.0407     0.214   0.830
+4 modulation_depth60                -0.0484    0.041     -1.18    0.238
+5 modulation_depth80                -0.0527    0.0411    -1.28    0.200
+6 frequency12.5:modulation_depth60   0.0333    0.0577     0.577   0.564
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/07_eye_count_glmm.csv
+
+ ============================================================ 
+PART C: first_fixation -- Stage 1 proportion + Stage 2 latency
+============================================================ 
+
+[Stage 1] Proportion fixated by frequency
+# A tibble: 4 × 4
+  frequency n_trials n_fixated pct_fixated
+  <fct>        <int>     <int>       <dbl>
+1 0               75        75       100  
+2 8.33           225       224        99.6
+3 12.5           225       225       100  
+4 25             225       225       100  
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/07_eye_firstfix_stage1_pro
+p_by_freq.csv
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/07_eye_firstfix_stage1_pro
+p_full.csv
+# A tibble: 10 × 5
+   frequency modulation_depth n_trials n_fixated pct_fixated
+   <fct>     <fct>               <int>     <int>       <dbl>
+ 1 0         <NA>                   75        75       100  
+ 2 8.33      40                     75        75       100  
+ 3 8.33      60                     75        74        98.7
+ 4 8.33      80                     75        75       100  
+ 5 12.5      40                     75        75       100  
+ 6 12.5      60                     75        75       100  
+ 7 12.5      80                     75        75       100  
+ 8 25        40                     75        75       100  
+ 9 25        60                     75        75       100  
+10 25        80                     75        75       100  
+
+  [Stage 1 GLMM] Logistic: P(fixated) ~ frequency + (1|participant)
+boundary (singular) fit: see help('isSingular'
+)
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/07_eye_firstfix_stage1_log
+it.csv
+
+  Log-odds and OR:
+# A tibble: 4 × 6
+  term          estimate           OR std.error statistic p.value
+  <chr>            <dbl>        <dbl>     <dbl>     <dbl>   <dbl>
+1 (Intercept)       24.5 45027770762.    24502.    0.001    0.999
+2 frequency8.33    -19.1           0     24502.   -0.0008   0.999
+3 frequency12.5      0             1     28293.    0        1    
+4 frequency25        0             1     28293.    0        1    
+
+[Stage 2] Latency RM-ANOVA (cms_fixated == TRUE)
+  Trials with CMS fixation: 749 / 750 (99.9%)
+  Participants with all 4 freq levels: 25
+  Stage2 Step1: F(1.59,38.14)=1.465 p=0.2429 ηp²=0.058
+# A tibble: 3 × 4
+  contrast        estimate t.ratio p.value
+  <chr>              <dbl>   <dbl>   <dbl>
+1 8.33 Hz vs 0 Hz    -199.  -0.532   1    
+2 12.5 Hz vs 0 Hz    -539.  -1.68    0.315
+3 25 Hz vs 0 Hz      -181.  -0.604   1    
+  Participants with all 9 cells (Stage2 Step2): 25
+  Stage2 Step2: freq p=0.0522  depth p=0.5486  int p=0.6362
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/07_eye_firstfix_stage2_s1_
+main.csv
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/07_eye_firstfix_stage2_s1_
+emm.csv
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/07_eye_firstfix_stage2_s1_
+contrasts.csv
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/07_eye_firstfix_stage2_s2_
+main.csv
+
+ ============================================================ 
+PART D: valid_ratio quality stratification
+============================================================ 
+
+Row distribution by flag_low_eye_quality:
+# A tibble: 2 × 2
+  flag_low_eye_quality     n
+  <lgl>                <int>
+1 FALSE                  726
+2 TRUE                    24
+
+dwell_ratio_cms: full sample vs high-quality only (step1):
+# A tibble: 2 × 6
+  subset                F num_df den_df_GG  p_GG    pes
+  <chr>             <dbl>  <dbl>     <dbl> <dbl>  <dbl>
+1 full_sample       0.397   1.84      44.2 0.658 0.0163
+2 high_quality_only 0.684   1.81      43.4 0.496 0.0277
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/07_eye_quality_sensitivity
+.csv
+
+ ====================================================================== 
+SUMMARY: Eye Metrics RM-ANOVA (GG-corrected)
+====================================================================== 
+
+dwell_ratio_cms                     Step1 freq: F(1.84, 44.21)=0.40 p=0.6581 ηp²=0.016 ns
+                                    Step2 freq p=0.8977 ns | depth p=0.0263 * | int p=0.5004 ns
+dwell_time_cms_ms                   Step1 freq: F(1.96, 47.06)=0.62 p=0.5374 ηp²=0.025 ns
+                                    Step2 freq p=0.8406 ns | depth p=0.0254 * | int p=0.7544 ns
+fixation_duration_cms_mean_ms       Step1 freq: F(1.42, 34.1)=1.08 p=0.3316 ηp²=0.043 ns
+                                    Step2 freq p=0.7671 ns | depth p=0.8489 ns | int p=0.2428 ns
+fixation_duration_road_mean_ms      Step1 freq: F(2.22, 53.3)=0.12 p=0.9019 ηp²=0.005 ns
+                                    Step2 freq p=0.8236 ns | depth p=0.3272 ns | int p=0.5435 ns
+transition_count                    Step1 freq: F(2.09, 50.12)=0.16 p=0.8624 ηp²=0.007 ns
+                                    Step2 freq p=0.7295 ns | depth p=0.3632 ns | int p=0.6795 ns
+fixation_count_cms                  Step1 freq: F(2.43, 58.34)=0.41 p=0.7036 ηp²=0.017 ns
+                                    Step2 freq p=0.9671 ns | depth p=0.1989 ns | int p=0.2076 ns
+fixation_count_road                 Step1 freq: F(2.22, 53.19)=1.89 p=0.1566 ηp²=0.073 ns
+                                    Step2 freq p=0.2407 ns | depth p=0.0455 * | int p=0.6372 ns
+
+first_fixation latency (Stage2 Step1): F(1.59,38.14)=1.47 p=0.2429 ηp²=0.058 ns
+
+07_anova_eye.R DONE
+  -> 07_eye_step1_main/contrasts/emm.csv
+  -> 07_eye_step2_main/posthoc.csv
+  -> 07_eye_summary.csv
+  -> 07_eye_count_glmm.csv
+  -> 07_eye_firstfix_stage1_prop_*.csv
+  -> 07_eye_firstfix_stage1_logit.csv
+  -> 07_eye_firstfix_stage2_*.csv
+  -> 07_eye_quality_sensitivity.csv
+  -> 07_eye_pupil_caveat.csv
+
+=================================================================
+>>  R/08_ssq.R
+=================================================================
+00_setup.R loaded — seed=2026, theme=theme_min
+imal(12), helpers ready.
+[SSQ] Raw file: 50 rows x 19 cols
+[SSQ] Items found: 16 | Participants: 25 | Sessions: Pre-test / Post-test
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/08_ssq_scores.csv
+
+[SSQ] Kennedy (1993) scores (N x 9.54 / O x 7.58 / TS = (N+O+D) x 3.74):
+# A tibble: 2 × 7
+  session   N_score_mean N_score_sd O_score_mean O_score_sd TS_mean TS_sd
+  <chr>            <dbl>      <dbl>        <dbl>      <dbl>   <dbl> <dbl>
+1 Post-test         5.34       8.74        17.9        19.8   13.8  14.6 
+2 Pre-test          2.67       5.17         6.97       12.0    5.39  9.29
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/08_ssq_prepost_tests.csv
+
+[SSQ] Pre vs Post tests:
+# A tibble: 3 × 8
+  subscale         mean_pre mean_post mean_delta     t p_ttest p_wilcox cohens_d
+  <chr>               <dbl>     <dbl>      <dbl> <dbl>   <dbl>    <dbl>    <dbl>
+1 Nausea (N)           2.67      5.34       2.67  2.06  0.05     0.0593    0.413
+2 Oculo-motor (O)      6.97     17.9       10.9   3.02  0.0059   0.0081    0.605
+3 Total Severity …     5.39     13.8        8.38  3.13  0.0045   0.003     0.627
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/08_ssq_delta_correlations.
+csv
+
+[SSQ] Delta-SSQ correlations (Spearman rho):
+# A tibble: 9 × 4
+  ssq_delta behaviour     rho p_value
+  <chr>     <chr>       <dbl>   <dbl>
+1 delta_N   mean_TTC   -0.152  0.468 
+2 delta_N   mean_Q1     0.311  0.130 
+3 delta_N   mean_dwell -0.134  0.522 
+4 delta_O   mean_TTC    0.144  0.494 
+5 delta_O   mean_Q1     0.554  0.0041
+6 delta_O   mean_dwell -0.055  0.793 
+7 delta_TS  mean_TTC    0.1    0.633 
+8 delta_TS  mean_Q1     0.536  0.0058
+9 delta_TS  mean_dwell -0.009  0.964 
+
+ ============================================================ 
+SUMMARY: SSQ pre vs post (Kennedy 1993)
+============================================================ 
+
+  Nausea (N)               pre=2.7  post=5.3  delta=2.7  t(24)=2.06  p=0.0500 ns  d=0.41
+  Oculo-motor (O)          pre=7.0  post=17.9  delta=10.9  t(24)=3.02  p=0.0059 **  d=0.60
+  Total Severity (TS)      pre=5.4  post=13.8  delta=8.4  t(24)=3.13  p=0.0045 **  d=0.63
+
+08_ssq.R DONE
+  -> 08_ssq_scores.csv
+  -> 08_ssq_prepost_tests.csv
+  -> 08_ssq_delta_correlations.csv
+
+=================================================================
+>>  R/09_sensitivity.R
+=================================================================
+00_setup.R loaded — seed=2026, theme=theme_min
+imal(12), helpers ready.
+[SENS] master: 750 rows
+
+ ======================================================= 
+PART 1: P09 / P15 exclusion
+======================================================= 
+  [full_sample     ] TTC_s freq: F(2.23,53.62)=3.600 p=0.0297 pes=0.130
+  [full_sample     ] Q1    freq: F(1.54,36.89)=54.070 p=0.0000 pes=0.693
+  [excl_P09        ] TTC_s freq: F(2.24,51.59)=3.423 p=0.0352 pes=0.130
+  [excl_P09        ] Q1    freq: F(1.54,35.31)=50.575 p=0.0000 pes=0.687
+  [excl_P15        ] TTC_s freq: F(2.41,55.36)=4.311 p=0.0131 pes=0.158
+  [excl_P15        ] Q1    freq: F(1.59,36.68)=50.111 p=0.0000 pes=0.685
+  [excl_P09_P15    ] TTC_s freq: F(2.41,53.11)=4.026 p=0.0176 pes=0.155
+  [excl_P09_P15    ] Q1    freq: F(1.59,35.03)=46.557 p=0.0000 pes=0.679
+
+ ======================================================= 
+PART 2: Scene as factor (LMM with scene random intercept)
+======================================================= 
+boundary (singular) fit: see help('isSingular'
+)
+[Scene LMM] ANOVA-type III:
+                      Effect F_value p_value
+1                  frequency  6.6272  0.0014
+2           modulation_depth  2.1722  0.1148
+3 frequency:modulation_depth  1.7016  0.1479
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/09_scene_lmm.csv
+
+ ======================================================= 
+PART 3: Ratings — complete ratings only vs full sample
+======================================================= 
+  Q1 — full p=0.0000 pes=0.693 | complete-only p=0.0000 pes=0.693
+  Q2 — full p=0.0000 pes=0.544 | complete-only p=0.0000 pes=0.544
+  Q3 — full p=0.0000 pes=0.502 | complete-only p=0.0000 pes=0.502
+  Q4 — full p=0.0119 pes=0.192 | complete-only p=0.0119 pes=0.192
+
+ ======================================================= 
+PART 4: Eye quality stratification (dwell_ratio_cms)
+======================================================= 
+  dwell_ratio_cms — full p=0.6581 pes=0.016 | high-quality p=0.4958 pes=0.028
+  transition_count — full p=0.8624 pes=0.007 | high-quality p=0.8144 pes=0.008
+  [CSV] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/tables/09_sensitivity_summary.csv
+
+ ======================================================= 
+SUMMARY: Sensitivity analyses — full sample vs subsets
+======================================================= 
+All analyses converge: key conclusions robust across P09/P15 exclusion,
+complete-only ratings, and high-quality eye data.
+
+09_sensitivity.R DONE
+  -> 09_sensitivity_summary.csv
+  -> 09_scene_lmm.csv
+
+=================================================================
+>>  R/10_plots.R
+=================================================================
+00_setup.R loaded — seed=2026, theme=theme_min
+imal(12), helpers ready.
+[PLOTS] master loaded: 750 rows
+
+[FIG 1] QQ TTC...
+  [FIG] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/figures/fig_qq_ttc.png
+[FIG 2] Residuals TTC...
+`geom_smooth()` using formula = 'y ~ x'
+  [FIG] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/figures/fig_resid_ttc.png
+[FIG 3] Outlier box TTC...
+  [FIG] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/figures/fig_outlier_ttc.png
+[FIG 4] TTC box 10 conditions...
+  [FIG] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/figures/fig_ttc_box.png
+[FIG 5] TTC interaction...
+  [FIG] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/figures/fig_ttc_interaction.png
+[FIG 6] TTC spaghetti...
+  [FIG] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/figures/fig_ttc_spaghetti.png
+[FIG 7] Ratings bar...
+  [FIG] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/figures/fig_ratings_bar.png
+[FIG 8] Ratings Likert...
+  [FIG] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/figures/fig_ratings_likert.png
+[FIG 9] Ratings heatmap...
+  [FIG] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/figures/fig_ratings_heatmap.png
+[FIG 10] Eye dwell...
+  [FIG] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/figures/fig_eye_dwell.png
+[FIG 11] Eye interaction...
+  [FIG] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/figures/fig_eye_interaction.png
+[FIG 12] First fixation...
+  [FIG] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/figures/fig_eye_firstfix.png
+[FIG 13] SSQ pre/post...
+  [FIG] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/figures/fig_ssq_prepost.png
+[FIG 14] Forest plot...
+  [FIG] Saved → C:/Users/50560/Desktop/cms_ana
+lysis/output/figures/fig_effectsize_forest.png
+
+ ================================================================= 
+10_plots.R DONE — figures generated in output/figures/
+================================================================= 
+
+  fig_effectsize_forest.png
+  fig_eye_dwell.png
+  fig_eye_firstfix.png
+  fig_eye_interaction.png
+  fig_outlier_ttc.png
+  fig_qq_eye.png
+  fig_qq_ratings.png
+  fig_qq_ttc.png
+  fig_ratings_bar.png
+  fig_ratings_heatmap.png
+  fig_ratings_likert.png
+  fig_resid_ttc.png
+  fig_ssq_prepost.png
+  fig_ttc_box.png
+  fig_ttc_interaction.png
+  fig_ttc_spaghetti.png
+
+Total: 16 PNG files
+There were 50 or more warnings (use warnings()
+ to see the first 50)
+
+
+#################################################################
+  PIPELINE COMPLETE  (44.9s)
+#################################################################
+
+Tables  (45): C:/Users/50560/Desktop/cms_analysis/output/tables
+   01_filename_decode_check.csv 
+   02_flag_summary.csv 
+   03_descriptives_eye.csv 
+   03_descriptives_firstfix_stage1_prop.csv 
+   03_descriptives_firstfix_stage2_latency.csv 
+   03_descriptives_ratings.csv 
+   03_descriptives_ttc.csv 
+   03_participant_characteristics.csv 
+   04_assumption_checks.csv 
+   05_anova_ttc_lmm_anova.csv 
+   05_anova_ttc_lmm_fixed.csv 
+   05_anova_ttc_step1_contrasts.csv 
+   05_anova_ttc_step1_emm.csv 
+   05_anova_ttc_step1_main.csv 
+   05_anova_ttc_step2_main.csv 
+   05_anova_ttc_step2_posthoc.csv 
+   06_ratings_clmm.csv 
+   06_ratings_q2q3_consistency.csv 
+   06_ratings_step1_contrasts.csv 
+   06_ratings_step1_emm.csv 
+   06_ratings_step1_main.csv 
+   06_ratings_step2_main.csv 
+   06_ratings_step2_posthoc.csv 
+   06_ratings_summary.csv 
+   07_eye_count_glmm.csv 
+   07_eye_firstfix_stage1_logit.csv 
+   07_eye_firstfix_stage1_prop_by_freq.csv 
+   07_eye_firstfix_stage1_prop_full.csv 
+   07_eye_firstfix_stage2_s1_contrasts.csv 
+   07_eye_firstfix_stage2_s1_emm.csv 
+   07_eye_firstfix_stage2_s1_main.csv 
+   07_eye_firstfix_stage2_s2_main.csv 
+   07_eye_pupil_caveat.csv 
+   07_eye_quality_sensitivity.csv 
+   07_eye_step1_contrasts.csv 
+   07_eye_step1_emm.csv 
+   07_eye_step1_main.csv 
+   07_eye_step2_main.csv 
+   07_eye_step2_posthoc.csv 
+   07_eye_summary.csv 
+   08_ssq_delta_correlations.csv 
+   08_ssq_prepost_tests.csv 
+   08_ssq_scores.csv 
+   09_scene_lmm.csv 
+   09_sensitivity_summary.csv 
+
+Figures (16): C:/Users/50560/Desktop/cms_analysis/output/figures
+   fig_effectsize_forest.png 
+   fig_eye_dwell.png 
+   fig_eye_firstfix.png 
+   fig_eye_interaction.png 
+   fig_outlier_ttc.png 
+   fig_qq_eye.png 
+   fig_qq_ratings.png 
+   fig_qq_ttc.png 
+   fig_ratings_bar.png 
+   fig_ratings_heatmap.png 
+   fig_ratings_likert.png 
+   fig_resid_ttc.png 
+   fig_ssq_prepost.png 
+   fig_ttc_box.png 
+   fig_ttc_interaction.png 
+   fig_ttc_spaghetti.png 
+
+-----------------------------------------------------------------
+KEY CONCLUSIONS BY SRQ
+-----------------------------------------------------------------
+
+SRQ1 — Does flicker frequency affect lane-change timing (TTC)?
+  TTC Step1 RM-ANOVA: F(2.23, 53.62)=3.600, p=0.030 *, etap2=0.130.
+  Planned contrasts vs 0 Hz: 0 of 3 reached p<.05 (Holm-corrected).
+  -> SUPPORTED: Flicker frequency significantly modulates TTC.
+
+SRQ2 — Do frequency & depth affect visual search and cognitive load?
+  Q1 (comfort):  F(1.54,36.89)=54.070, p<.001 ***, etap2=0.693
+  dwell_ratio_cms:  F(1.84,44.21)=0.397, p=0.658 ns, etap2=0.016
+  SSQ Total Severity pre vs post: p=0.004 **
+  -> SUPPORTED for ratings (Q1-Q4 all significant);
+     NOT SUPPORTED for eye metrics (no frequency effect on gaze allocation).
+
+SRQ3 — Is there a frequency x modulation-depth interaction on TTC?
+  TTC Step2: freq p=0.002 ** | depth p=0.171 ns | interaction p=0.181 ns (etap2=0.066)
+  -> NOT SUPPORTED: No significant frequency x depth interaction on TTC.
+     Depth did not amplify frequency effects; effects were largely additive.
+
+-----------------------------------------------------------------
+ERRORS: none — all scripts completed successfully.
+-----------------------------------------------------------------
+run_all.R COMPLETE

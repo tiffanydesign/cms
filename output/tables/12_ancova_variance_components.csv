@@ -1,0 +1,5 @@
+Model,Var_PID,Var_Resid,ICC,PID_var_reduced_pct
+Base,3.9321,0.2411,0.9422,0
++exp_confidence,3.9108,0.2411,0.9419,0.5
++driving_style,3.8864,0.2411,0.9416,1.2
++both,3.857,0.2411,0.9412,1.9

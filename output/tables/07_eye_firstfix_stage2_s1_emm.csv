@@ -1,0 +1,5 @@
+frequency,emmean,SE,df,lower.CL,upper.CL,DV
+X0,3461.409,499.753,24,2429.971,4492.848,first_fixation_cms_time_ms
+X8.33,3262.021,400.92,24,2434.564,4089.478,first_fixation_cms_time_ms
+X12.5,2922.873,357.983,24,2184.032,3661.715,first_fixation_cms_time_ms
+X25,3280.514,426.204,24,2400.873,4160.155,first_fixation_cms_time_ms

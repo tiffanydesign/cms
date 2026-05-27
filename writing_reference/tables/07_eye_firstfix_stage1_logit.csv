@@ -1,0 +1,5 @@
+effect,term,estimate,std.error,statistic,p.value,conf.low,conf.high,OR
+fixed,(Intercept),24.5305,24502.4284,0.001,0.9992,-47999.3467,48048.4078,45027770762.152
+fixed,frequency8.33,-19.1189,24502.4285,-8e-4,0.9994,-48042.9962,48004.7584,0
+fixed,frequency12.5,0,28293.0479,0,1,-55453.3548,55453.3548,1
+fixed,frequency25,0,28293.053,0,1,-55453.3648,55453.3649,1
