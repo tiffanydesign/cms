@@ -778,7 +778,7 @@ First-fixation latency unaffected by frequency.
 
 ## 8. Sensitivity Analyses
 
-### 7.1 P09/P15 Exclusion (Step 1 RM-ANOVA)
+### 8.1 P09/P15 Exclusion (Step 1 RM-ANOVA)
 
 *Source: 09_sensitivity_summary.csv*
 
@@ -795,7 +795,7 @@ First-fixation latency unaffected by frequency.
 
 **TTC frequency effect significant in all exclusion sets (p range .004–.015, η²_p range .174–.211). Q1 fully robust.**
 
-### 7.2 Scene LMM (flickering conditions; scene as crossed random intercept)
+### 8.2 Scene LMM (flickering conditions; scene as crossed random intercept)
 
 *Source: 09_scene_lmm.csv; Satterthwaite ddf*
 
@@ -807,7 +807,7 @@ First-fixation latency unaffected by frequency.
 
 **Frequency effect replicated (p = .001). Depth and interaction ns. Scene variation does not explain the TTC result.**
 
-### 7.3 Complete-Ratings Comparison
+### 8.3 Complete-Ratings Comparison
 
 *Source: 09_sensitivity_summary.csv*  
 flag_missing_rating = 0 for all 750 observations → full-sample and complete-case analyses are identical.
@@ -817,9 +817,9 @@ flag_missing_rating = 0 for all 750 observations → full-sample and complete-ca
 | Q1 | <.001 | <.001 | .693 | .693 |
 | Q2 | <.001 | <.001 | .544 | .544 |
 | Q3 | <.001 | <.001 | .502 | .502 |
-| Q4 | .012 | .012 | .193 | .193 |
+| Q4 | .013 | .013 | .189 | .189 |
 
-### 7.4 Eye-Quality Stratification
+### 8.4 Eye-Quality Stratification
 
 *Source: 09_sensitivity_summary.csv; high_quality = flag_low_eye_quality == FALSE*
 
@@ -827,18 +827,18 @@ flag_missing_rating = 0 for all 750 observations → full-sample and complete-ca
 |----|--------|------|------|
 | dwell_ratio_cms | full_sample | .6581 | .016 |
 | dwell_ratio_cms | high_quality | .4958 | .028 |
-| transition_count | full_sample | .8624 | .007 |
+| transition_count | full_sample | .9226 | .004 |
 | transition_count | high_quality | .8144 | .008 |
 
 Null frequency effects on gaze allocation persist in the high-quality subsample.
 
 ---
 
-## 8. Scene (A/B/C) Analysis
+## 9. Scene (A/B/C) Analysis
 
 *Source: 11_scene_anova.R; Script: R/11_scene_anova.R*
 
-### 8.1 Descriptive TTC by Scene
+### 9.1 Descriptive TTC by Scene
 
 *Source: 11_scene_descriptives.csv; raw trial-level, all conditions combined*
 
@@ -850,7 +850,7 @@ Null frequency effects on gaze allocation persist in the high-quality subsample.
 
 Scene C has the shortest TTC (most conservative timing); Scene A the longest.
 
-### 8.2 Model 1 — TTC ~ Frequency × Scene (4×3 RM-ANOVA, GG-corrected)
+### 9.2 Model 1 — TTC ~ Frequency × Scene (4×3 RM-ANOVA, GG-corrected)
 
 *Source: 11_scene_anova_main.csv (Model = M1_freq_x_scene)*  
 *Aggregate: participant × frequency × scene (mean over modulation depths)*  
@@ -864,7 +864,7 @@ Scene C has the shortest TTC (most conservative timing); Scene A the longest.
 
 **Scene main effect significant**, F(1.97, 47.28) = 6.444, p = .0035, η²p = .212 (medium-large). Frequency × scene interaction marginal (p = .054, ns by α = .05).
 
-### 8.3 Model 2 — TTC ~ Depth × Scene (3×3 RM-ANOVA, flickering only, GG-corrected)
+### 9.3 Model 2 — TTC ~ Depth × Scene (3×3 RM-ANOVA, flickering only, GG-corrected)
 
 *Source: 11_scene_anova_main.csv (Model = M2_depth_x_scene)*  
 *Aggregate: participant × modulation_depth × scene (mean over flickering frequencies)*
@@ -877,7 +877,7 @@ Scene C has the shortest TTC (most conservative timing); Scene A the longest.
 
 When restricted to flickering conditions (averaging over frequency), the scene effect weakens and does not reach significance (p = .078). Neither depth × scene interaction is significant.
 
-### 8.4 Model 3 — LMM: TTC ~ Frequency × Depth × Scene + (1 | Participant)
+### 9.4 Model 3 — LMM: TTC ~ Frequency × Depth × Scene + (1 | Participant)
 
 *Source: 11_scene_lmm.csv; trial-level flickering data (n = 673 trials); Satterthwaite df*  
 *LMM used to handle P03/P11 missing cell at 8.33 Hz / 60% / Scene C*
@@ -894,7 +894,7 @@ When restricted to flickering conditions (averaging over frequency), the scene e
 
 The LMM recovers a significant **frequency × scene** interaction (p = .041), confirming that scene differences vary across flickering frequency levels.
 
-### 8.5 Scene Marginal Means (from M1)
+### 9.5 Scene Marginal Means (from M1)
 
 *Source: 11_scene_emm.csv; averaged over 4 frequency levels*
 
@@ -904,7 +904,7 @@ The LMM recovers a significant **frequency × scene** interaction (p = .041), co
 | B | 4.495 | 0.440 | [3.587, 5.403] |
 | C | 4.189 | 0.389 | [3.386, 4.991] |
 
-### 8.6 Post-hoc: Bonferroni Pairwise t-tests between Scenes
+### 9.6 Post-hoc: Bonferroni Pairwise t-tests between Scenes
 
 *Source: 11_scene_posthoc_bonferroni.csv; 3 comparisons; Bonferroni α = 0.05/3 = 0.0167*
 
@@ -919,7 +919,7 @@ Participants responded **0.454 s earlier** (shorter TTC) in Scene C than in Scen
 
 ---
 
-## Figures Confirmed (output/figures/ — 17 PNG at 300 DPI)
+## Figures Confirmed (output/figures/ — 21 PNG at 300 DPI)
 
 | Filename | Script | Content |
 |----------|--------|---------|
@@ -940,16 +940,20 @@ Participants responded **0.454 s earlier** (shorter TTC) in Scene C than in Scen
 | fig_ratings_unified_emm.png | 10b FIG A | Q1–Q4 Step-1 EMMs, unified negative direction (higher = worse) |
 | fig_ratings_unified_heatmap.png | 10b FIG B | 10-condition × 4-DV heatmap, unified direction |
 | fig_ratings_unified_depth.png | 10b FIG C | Modulation depth gradient for all 4 DVs, unified direction |
+| fig_qq_ratings.png | 10_plots FIG 15 | Q–Q plots for ratings (Q1–Q4) residual normality |
+| fig_qq_eye.png | 10_plots FIG 16 | Q–Q plots for eye-tracking DVs residual normality |
+| fig_post_survey_stacked.png | 13_post_survey FIG 1 | Stacked horizontal bar chart for all 9 post-experiment questionnaire items |
+| fig_post_survey_summary.png | 13_post_survey FIG 2 | Normalised dot-plot: Median ± IQR + Mean for all 9 questionnaire items |
 
 ---
 
-## Section 9 — ANCOVA: Individual Driving Tendencies as Covariates
+## 10. ANCOVA: Individual Driving Tendencies as Covariates
 
 **Research question:** Does self-reported driving confidence during the experiment (Post-Experiment Q7) or real-life driving style (background questionnaire) account for individual differences in TTC judgement, and do they improve model fit?
 
 **Script:** `R/12_ancova_covariates.R`
 
-### 9.1 Covariates
+### 10.1 Covariates
 
 | Covariate | Source | Scale | Encoding |
 |-----------|--------|-------|----------|
@@ -962,7 +966,7 @@ exp_confidence — N per level: Not confident at all=1, Unconfident=3, Neutral=2
 
 driving_style — N per level: Very cautious=4, Cautious=4, Balanced=13, Confident=3, Very confident=1
 
-### 9.2 Between-Subjects Regression (participant mean TTC ~ covariate)
+### 10.2 Between-Subjects Regression (participant mean TTC ~ covariate)
 
 | Covariate | β | SE | t | p | R² |
 |-----------|---|----|---|---|----|
@@ -972,7 +976,7 @@ driving_style — N per level: Very cautious=4, Cautious=4, Balanced=13, Confide
 
 Neither covariate significantly predicts participant-level mean TTC. Combined R² = .019 (both covariates explain only 1.9% of between-subject variance in mean TTC).
 
-### 9.3 LMM Model Comparison (LRT, ML estimation)
+### 10.3 LMM Model Comparison (LRT, ML estimation)
 
 Base model: `TTC ~ frequency + (1|participant_id)`
 
@@ -984,7 +988,7 @@ Base model: `TTC ~ frequency + (1|participant_id)`
 
 AIC **increases** in all extended models (penalised for extra parameters without commensurate fit improvement). LRT non-significant in all cases. **Neither covariate improves model fit.**
 
-### 9.4 Fixed-Effect Coefficients (REML, both-covariates model)
+### 10.4 Fixed-Effect Coefficients (REML, both-covariates model)
 
 | Term | Estimate | SE | df | t | p |
 |------|----------|----|----|---|---|
@@ -995,7 +999,7 @@ AIC **increases** in all extended models (penalised for extra parameters without
 | exp_confidence | 0.150 | 0.370 | 22 | 0.406 | .689 ns |
 | driving_style | 0.233 | 0.424 | 22 | 0.550 | .588 ns |
 
-### 9.5 Moderation Test (frequency × covariate interaction)
+### 10.5 Moderation Test (frequency × covariate interaction)
 
 | Interaction | Δχ²(3) | p |
 |-------------|--------|---|
@@ -1004,7 +1008,7 @@ AIC **increases** in all extended models (penalised for extra parameters without
 
 Neither covariate significantly moderates the frequency effect on TTC. The driving_style × frequency interaction shows a marginal trend (p = .086) but does not reach α = .05.
 
-### 9.6 Between-Subject Variance Explained
+### 10.6 Between-Subject Variance Explained
 
 Baseline ICC = **0.942** — 94.2% of total TTC variance is attributable to stable between-subject differences, reflecting large individual variability in TTC judgement.
 
@@ -1017,7 +1021,7 @@ Baseline ICC = **0.942** — 94.2% of total TTC variance is attributable to stab
 
 Both covariates together account for only **1.9%** of the large between-subject variance in TTC.
 
-### 9.7 Conclusion
+### 10.7 Conclusion
 
 Neither self-reported experimental decision confidence (Post-Experiment Q7) nor habitual real-life driving style accounts for meaningful individual differences in TTC judgement. Adding either or both covariates does not improve model fit (all ΔAIC > 0, all LRT p > .59). The driving style × frequency interaction is non-significant (p = .086). These null results suggest that TTC individual differences in this experiment are driven by other unmeasured factors (e.g., perceptual sensitivity, speed/distance estimation ability, risk threshold), not by self-categorised driving disposition or task-specific confidence.
 
