@@ -91,6 +91,33 @@
 
 ---
 
+### Post-Experiment Questionnaire (N = 25, single-administration ordinal)
+
+*Source: 13_post_survey_descriptives.csv, 13_post_survey_frequencies.csv*  
+*Items assessed after all 30 trials. No within-subject manipulation — descriptive only.*
+
+| Item | Scale (low → high) | M | Mdn | Key % |
+|------|-------------------|---|-----|-------|
+| Q1: Lane-change difficulty | 6-pt (Easy → Very difficult) | 3.68 | Somewhat difficult | 68% Somewhat difficult or harder |
+| Q2: Mental demand | 6-pt (Low → Very high) | 3.24 | Moderate | 44% Somewhat high or above |
+| Q3: Effort exerted | 6-pt (Little → Very much) | 3.20 | Moderate | 36% Moderate (modal) |
+| Q4: CMS motion clarity | 6-pt (Very unclear → Clear) | 4.16 | Somewhat clear | 52% Somewhat clear or better |
+| Q5: Flicker interference | 5-pt (Slightly → Extremely) | 2.68 | Strongly | 64% Strongly or above; 84% Moderately or above |
+| Q6: Visual discomfort / eye fatigue | 5-pt (Hardly any → Severe) | 2.84 | Moderate | 64% Moderate or worse |
+| Q7: Decision confidence | 5-pt (Not confident at all → Confident) | 3.96 | Somewhat confident | 76% Somewhat confident or above |
+| Q8: Flicker-difference noticeability | 4-pt (Slightly → Extremely noticeable) | 2.88 | Very noticeable | 68% Very or Extremely noticeable |
+| Q9: Flicker influence on decisions | 5-pt (Hardly at all → Significantly) | 3.40 | Strongly | 52% Strongly or Significantly |
+
+**Key findings:**
+- **Flicker was salient and disruptive**: Q8 (Mdn = "Very noticeable", 68% very/extremely) and Q5 (Mdn = "Strongly", 64% strongly/above) confirm the manipulation was perceived. Q9 (52% strongly-or-significantly) shows the perceived influence on decision-making.
+- **Confidence–difficulty dissociation**: Despite task difficulty (Q1 Mdn = "Somewhat difficult") and interference (Q5 Mdn = "Strongly"), Q7 shows 76% felt somewhat-or-more confident. This parallels the behavioral dissociation: gaze allocation was unaffected while subjective discomfort was large.
+- **CMS motion interpretable despite flickering**: Q4 Mdn = "Somewhat clear" — participants extracted information but rated it as effortful (Q2, Q3 both Mdn = "Moderate").
+- **Convergent validity**: Q2 (mental demand) and Q3 (effort) are consistent with the large within-subject effects for ratings DVs (η²_p .502–.544); Q6 (visual discomfort) aligns with SSQ oculomotor increases (d = 0.61).
+
+| Confidence | SOLID (descriptive; no repeated-measures test applicable — single-administration items) |
+
+---
+
 ### ANCOVA — Individual Differences Covariates
 
 | Metric | Test | Value | Confidence |
@@ -126,7 +153,7 @@
 | 1 | Simpson's Paradox | NOTE | Not applicable: within-subject design; no grouping variable where aggregate vs subgroup directions could diverge. Scene analysis (A/B/C) shows consistent frequency effects across scenes. | None required |
 | 2 | Ecological Fallacy | NOTE | Not applicable: individual-level trial data used for individual-level inference. | None required |
 | 3 | Berkson's Paradox | CAUTION | Participants are volunteer university students in a VR lab study — possible self-selection for tech-comfort and CMS experience. May affect generalizability of TTC absolute values. | Acknowledge self-selection limitation in Discussion |
-| 4 | Collider Bias | CAUTION | ANCOVA model includes exp_confidence as covariate. exp_confidence could plausibly be influenced by both frequency/depth (harder conditions → less confidence) and TTC (faster responders → more confident). Collider if both causal paths exist. | Report LMM-only results as primary; treat ANCOVA as sensitivity check. Flagged in Section 9. |
+| 4 | Collider Bias | CAUTION | ANCOVA model includes exp_confidence as covariate. exp_confidence could plausibly be influenced by both frequency/depth (harder conditions → less confidence) and TTC (faster responders → more confident). Collider if both causal paths exist. | Report LMM-only results as primary; treat ANCOVA as sensitivity check. Flagged in Section 10. |
 | 5 | Base Rate Neglect | NOTE | Not applicable: not a diagnostic/screening study; no PPV/NPV/sensitivity/specificity reported. | None required |
 | 6 | Regression to the Mean | NOTE | Not applicable: conditions are randomly counterbalanced within-subject; no group selection based on extreme scores. | None required |
 | 7 | Survivorship Bias | NOTE | All 25 participants completed the study; no dropouts. P09 and P15 flagged but retained and sensitivity-checked. flag_no_response = 0.3% (2 trials), all retained with NA. Attrition effectively zero. | None required |
@@ -139,11 +166,11 @@
 
 ## Hypothesis Verdict
 
-| Hypothesis | Prediction | Result | Verdict |
-|-----------|------------|--------|---------|
-| H1: Flicker vs stable (SRQ1) | Flickering reduces TTC (more risk-taking); 12.5 Hz deviates most | 25 Hz actually INCREASES TTC (more conservative); no individual frequency significantly differs from 0 Hz in planned contrasts. Subjective discomfort confirmed for all flickering conditions. | PARTIALLY SUPPORTED — direction unexpected for TTC; subjective component confirmed |
-| H2: Freq + Depth → search effort + cognitive load (SRQ2) | Both ↑ → search effort ↑, cognitive load ↑ | Subjective ratings fully support (large effects). Eye-tracking does NOT support — no frequency effects on any gaze metric; only small depth effects on dwell. | PARTIALLY SUPPORTED — subjective only; gaze null |
-| H3: Frequency × Depth interaction (SRQ3) | High depth amplifies frequency effect | No significant interaction for any DV (all p > .18) | NOT SUPPORTED |
+| Hypothesis | Prediction | Result | Post-survey convergence | Verdict |
+|-----------|------------|--------|------------------------|---------|
+| H1: Flicker vs stable (SRQ1) | Flickering reduces TTC (more risk-taking); 12.5 Hz deviates most | 25 Hz actually INCREASES TTC (more conservative, M=4.73 s); no individual frequency significantly differs from 0 Hz in planned contrasts (all p=.426). Subjective discomfort (Q1–Q4) confirmed for all flickering conditions (all p <.001). | Q5 (Mdn="Strongly", 64% strongly/above) and Q8 (68% very/extremely noticeable) confirm manipulation was strongly perceived. Q9: 52% strongly-or-significantly influenced by flicker. Direction of TTC effect (25 Hz → longer, not shorter) remains unexpected. | PARTIALLY SUPPORTED — direction unexpected for TTC behavioral effect; subjective discomfort component fully confirmed; flicker perceived as highly disruptive |
+| H2: Freq + Depth → search effort + cognitive load (SRQ2) | Higher frequency and depth → greater visual search effort and cognitive load | Subjective ratings (Q1–Q4, CL) fully support: large depth effects (η²_p .319–.767) and moderate frequency effects (η²_p .201). Eye-tracking does NOT support — no frequency effects on any of 7 gaze metrics; small borderline depth effects on dwell only. | Q2 (mental demand, Mdn="Moderate", 44% somewhat high+), Q3 (effort, Mdn="Moderate"), Q6 (visual discomfort, 64% moderate+), and Q7 (confidence, 76% somewhat confident+) are consistent with the rated cognitive cost. | PARTIALLY SUPPORTED — subjective and self-report channels converge; objective gaze behavior shows no frequency effect (dissociation) |
+| H3: Frequency × Depth interaction (SRQ3) | High modulation depth amplifies frequency effect | No significant frequency × depth interaction for any DV (all p > .18, all η²_p < .065). Null replicated in LMM robustness check and scene-LMM. | No post-survey items directly test the interaction. Q9 (flicker influence) cannot distinguish frequency vs depth contributions. | NOT SUPPORTED — clean null, replicated across all DVs and all robustness checks |
 
 ---
 
@@ -159,11 +186,12 @@
 1. **Lead with depth as dominant predictor** for subjective ratings — η²_p up to .767 vs frequency η²_p up to .201.
 2. **TTC direction is counterintuitive** — 25 Hz → longer TTC (more conservative timing, not more risk-taking). Frame as a potential "over-caution under high-frequency flicker" effect.
 3. **No frequency × depth interaction** is a reportable null — reject H3 cleanly.
-4. **Eye-tracking and subjective ratings dissociate**: participants felt more discomfort and cognitive load but did not shift gaze allocation. This dissociation is theoretically interesting.
+4. **Eye-tracking and subjective ratings dissociate**: participants felt more discomfort and cognitive load but did not shift gaze allocation. Post-survey Q2, Q3, Q6 (demand/effort/discomfort all Mdn ≥ "Moderate") confirm the subjective experience; the gaze null is not due to lack of awareness.
 5. **ICC = 0.942**: large individual differences in TTC warrant explicit discussion. Perceptual sensitivity or idiosyncratic risk threshold are candidate explanations.
-6. **Label exploratory analyses**: scene analysis, ANCOVA, and eye-tracking depth effects should be labeled as exploratory.
+6. **Label exploratory analyses**: scene analysis (§9), ANCOVA (§10), and eye-tracking depth effects should be labeled as exploratory.
 7. **SSQ correlation is convergent validity evidence**, not a causal claim.
+8. **Post-survey as manipulation check and convergent validity**: Q5 (64% "Strongly" or above interference) and Q8 (68% very/extremely noticeable) confirm participants registered the flicker manipulation; Q9 (52% strongly/significantly influenced) supports ecological relevance. Q7 (76% somewhat-or-more confident) alongside difficulty (Q1: 68% somewhat difficult+) documents the confidence–difficulty dissociation that mirrors the behavioral/gaze disconnect.
 
 ---
 
-*Generated by experiment-agent validate mode | cms_analysis dataset | 2026-05-28*
+*Updated: 2026-05-28 — added §7 Post-Experiment Questionnaire, post-survey convergence evidence in Hypothesis Verdict, updated Reporting Notes | cms_analysis dataset*
